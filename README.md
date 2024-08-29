@@ -18,7 +18,7 @@ If the scooter isn't on the list, its not supported.
 | Xiaomi Electric Scooter Essential                                 |  ✅  |   ✅  |     ✅     |    155/157 or above    | Ninebot      |                                        |
 | Xiaomi Electric Scooter 1S                                        |  ✅  |   ✅  |     ✅     |        155 or above    | Ninebot      |                                        |
 | Xiaomi Electric Scooter 3                                         |  ✅  |   ✅  |     ✅     |     155 or above       | Ninebot      |                                        |
-| Xiaomi Eletric Scooter M365                                       |  ❌  |   ✅  |     ❌     |                        | Ninebot      | Needs Pro2 dash (any non 4 dot) for SHFW, or flash M356-ProBle.zip. |
+| Xiaomi Eletric Scooter M365                                       |  ❌  |   ✅  |      ✅    |                        | Ninebot      | Needs Pro2 dash (any non 4 dot) for SHFW, or flash M356-ProBle.zip. |
 | Ninebot G2                                                        |  ❌  |   ✅  |     ✅     |            ✅          | Ninebot      | SHFW Support in Development, no ETA. Flash with Reflasher and enable Race mode in SHU to drive 40kmh. |
 | Ninebot F60, F65                                                  |  ❌  |   ✅  |     ❌     |                        | Ninebot      |                                        |
 | Ninebot F2, F2 Pro, F2 Plus                                       |  ❌  |   ✅  |     ❌     |                        | Ninebot      | ST-Link Guide [here](f2.md). |
