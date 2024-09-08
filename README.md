@@ -21,13 +21,13 @@ If the scooter isn't on the list, its not supported.
 | Xiaomi Eletric Scooter M365                                       |  ❌  |   ✅  |      ✅    |                        | Ninebot      | Needs Pro2 dash (any non 4 dot) for SHFW, or flash M356-ProBle.zip. |
 | Ninebot G2                                                        |  ✅  |   ✅  |     ✅     |            ✅          | Ninebot      |                                        |
 | Ninebot F60, F65                                                  |  ❌  |   ✅  |     ❌     |                        | Ninebot      |                                        |
-| Ninebot F2, F2 Pro, F2 Plus                                       |  ❌  |   ✅  |     ❌     |                        | Ninebot      | ST-Link Guide [here](f2.md). |
+| Ninebot F2, F2 Plus, F2 Pro                                       | (✅) |   ✅  |     ❌     |                        | Ninebot      | ST-Link Guide [here](f2.md). F2 Pro can run G2 SHFW. |
 | Ninebot GT1, GT2                                                  |  ❌  |   ✅  |     ❌     |                        | Ninebot      |                                        |
 | Ninebot G65                                                       |  ❌  |   ✅  |     ❌     |                        | Ninebot      |                                        |
 | Xiaomi Eletric Scooter 3 Lite, 4,  4 Lite, 4 Ultra                |  ❌  |   ❌  |     ❌     |                        | Brightway    | No SHFW Support planned. Check [this](https://github.com/dnandha/stlink-lks32/) for basic CFW. |
 | Xiaomi Eletric Scooter 4 Pro 2nd gen                              |  ❌  |   ❌  |     ❌     |                        | Brightway    | No SHFW Support planned.                |
 | Xiaomi Eletric Scooter  4 Lite 2nd gen                            |  ❌  |   ❌  |     ❌     |                        | LEQI         | No SHFW Support planned.                |
-| Xiaomi Eletric Scooter 4 Pro, 4 Pro Max, 4 Pro Plus               |  ❌  |   ❌  |     ❌     |                        | Ninebot      | Check [NGFW](https://nextgenfw.pythonanywhere.com/) for Pro 4 CFW Patcher. Base DRV [here](https://mi-fw-info.streamlit.app/). |
+| Xiaomi Eletric Scooter 4 Pro, 4 Pro Max, 4 Pro Plus               |  ❌  |   ❌  |     ❌     |                        | Ninebot      | Check [NGFW](https://nextgenfw.pythonanywhere.com/) for CFW Patcher. Base DRV [here](https://mi-fw-info.streamlit.app/). |
 | Ninebot E2                                                        |  ❌  |   ✅  |     ❌     |                        | Ninebot      |                                        |
 | Ninebot Air T15                                                   |  ❌  |   ✅  |     ❌     |                        | Ninebot      |                                        |
 | Ninebot P100                                                      |  ❌  |   ✅  |     ❌     |                        | Ninebot      |                                        |
