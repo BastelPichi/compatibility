@@ -12,13 +12,13 @@ If the scooter isn't on the list, its not supported.
 | Ninebot E22, E25, E45                                             |  ✅  |   ✅  |     ✅     |     2.7.0 and above    | Ninebot      |                                        |
 | Ninebot F20, F25,  F30, F35, F40                                  |  ✅  |   ✅  |     ✅     |     5.7.X and above    | Ninebot      | SHFW 0.3.6 available, use the old app for configiguration |
 | Ninebot G30                                                       |  ✅  |   ✅  |     ✅     |    above 1.7.3/1.6.13  | Ninebot      |                                        |
-| Ninebot D18, D28, D38                                             |  ✅  |   ✅  |     ✅     |            ?           | Ninebot      | Currently unsupported for SHFW         |
+| Ninebot D18, D28, D38                                             |  ✅  |   ✅  |     ✅     |            ?           | Ninebot      | Currently no SHFW support  |
 | Xiaomi Electric Scooter Pro                                       |  ✅  |   ✅  |     ✅     |     155 or above       | Ninebot      |                                        |
 | Xiaomi Electric Scooter Pro 2                                     |  ✅  |   ✅  |     ✅     |     155 or above       | Ninebot      |                                        |
 | Xiaomi Electric Scooter Essential                                 |  ✅  |   ✅  |     ✅     |     155 or above       | Ninebot      |                                        |
 | Xiaomi Electric Scooter 1S                                        |  ✅  |   ✅  |     ✅     |     155 or above       | Ninebot      |                                        |
 | Xiaomi Electric Scooter 3                                         |  ✅  |   ✅  |     ✅     |     155 or above       | Ninebot      |                                        |
-| Xiaomi Eletric Scooter M365                                       |  ❌  |   ✅  |     ✅     |            ❌          | Ninebot      | Needs Pro BLE for SHFW, flash M356-ProBle.zip. |
+| Xiaomi Eletric Scooter M365                                       |  ❌  |   ✅  |     ✅     |            ❌          | Ninebot      | Flash M365-ProBLE.zip to use SHFW. Alternatively replace the dashboard with a non 4-dot one (pro/pro2 dashboard). |
 | Ninebot G2                                                        |  ✅  |   ✅  |     ✅     |            ✅          | Ninebot      |                                        |
 | Ninebot F65                                                       |  ❌  |   ✅  |     ❌     |                        | Ninebot      |                                        |
 | Ninebot F2, F2 Plus, F2 Pro                                       | (✅) |   ✅  |     ❌     |            ✅          | Ninebot      | ST-Link Guide [here](f2.md). F2 Pro can run G2 SHFW. |
