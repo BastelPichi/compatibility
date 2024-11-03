@@ -11,7 +11,7 @@
 | Ninebot G2                 | UNAH         | UNAHXXXXXXXXXX                                                          | 16.8  |                                                                |
 | Ninebot G2                 | PPAH         | PPAHXXXXXXXXXX                                                          | 20.25 |                                                                |
 | Ninebot G2                 | UNBJ         | UNBJXXXXXXXXXX                                                          | 15.9  |                                                                |
-| Ninebot G2                 | BBPJ         | BBPJXXXXXXXXXX                                                          | 19.48 |                                                                |
+| Ninebot G2                 | PPBJ         | PPBJXXXXXXXXXX                                                          | 19.48 |                                                                |
 |                            |              |                                                                         |       |                                                                |
 | -                          | Monorim 500W |                                                                         | 17.34 |                                                                |
 | -                          | Monomrim V4  |                                                                         | 25.15 |                                                                |
