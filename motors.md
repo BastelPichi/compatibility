@@ -4,7 +4,7 @@
 |----------------------------|--------------|-------------------------------------------------------------------------|-------|----------------------------------------------------------------|
 | Ninebot G30                | Gen 1        | 6ZXXXXXXXXXX Retail<br>5ZXXXXXXXXXX SNSC2.0/2.1 6MXXXXXXXXXX SNSC 2.2/2.3  | 16.62 |                                                                |
 | Ninebot G30                | Gen 2        | 9XXXXXXXXXX                                                             | 18.90 |                                                                |
-| Ninebot G30                | Gen 3/4      |                                                                         |       | Requires Base187/Enable New Motor under System Settings in SHU |
+| Ninebot G30                | Gen 3/4      | PCAHXXXXXXXXXX<br>PADHXXXXXXXXXX<br>PAAHXXXXXXXXXX<bR>PADJXXXXXXXXXX    |       | Requires Base187/Enable New Motor under System Settings in SHU |
 | Xiaomi M365, 1s, Essential |              |                                                                         | 18.55 |                                                                |
 | Xiaomi Pro, Pro 2          |              |                                                                         | 21.67 |                                                                |
 | Ninebot Fxx-Series         |              |                                                                         | 19.38 |                                                                |
