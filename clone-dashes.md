@@ -7,7 +7,6 @@
 <br>
 
 - Clone dashes usually run the N51802x
-- You _can_ flash the N51802x with Reflasher, MiDu-Flasher, m365-rescue or scooterflasher
+- You _can_ flash the N51802x with Webflasher, Reflasher, MiDu-Flasher, m365-rescue or scooterflasher
 - Since the Hardware is almost identical, stock FW usually works
 - If the dashboard is flashed, the behaviour described above will be fixed
-- Usually the only thing thats off after the flashing is the Buzzer, which sounds worse.
