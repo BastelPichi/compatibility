@@ -55,10 +55,10 @@ Black | /
 Note: The wire colors for the UART adapter can vary. Check back with the supplier which color is which.
 
 ##### A) UART adapter with attached cable
-![image](resources/uart_connection_direct.jpg)
+![image](resources/uart_connection_direct.png)
 
 ##### B) UART adapter + DuPont wires
-![image](resources/uart_connection_dupont.jpg)
+![image](resources/uart_connection_dupont.png)
 
 ### Step 2. Prepare patched firmware
 1. Visit this site: [mi-fw-info](https://mi-fw-info.streamlit.app)
