@@ -33,11 +33,9 @@ If you have an UART adapter without an attached cable, you'll need a set of fema
 ![image](resources/dupont_collection.png)
 
 ### Software
-Download the Bwflasher standalone executable via one of these links:
+Download the BwFlasher standalone executable here: [BwFlasher](https://github.com/scooterteam/bw-flasher/releases/latest)
 
-- Windows: [bwflasher.exe]()
-- Linux: [bwflasher]()
-- Mac: [bwflasher.app]()
+You can also run the tool locally from the BwFlasher source: [SourceCode](https://github.com/scooterteam/bw-flasher)
 
 ## Procedure
 
