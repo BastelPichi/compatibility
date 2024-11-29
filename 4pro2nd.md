@@ -8,7 +8,7 @@ Take special note of each point before proceeding:
 - Assumption of Risk: Modifying scooter firmware or hardware can pose significant risks, including but not limited to voiding warranties, compromising safety, reducing functionality, or violating legal regulations. By following this guide, users assume full responsibility for any and all outcomes, including personal injury, property damage, or legal penalties.
 - Legal Compliance: Users are solely responsible for ensuring that any modifications comply with applicable laws and regulations in their jurisdiction, including but not limited to those regarding speed limits, roadworthiness, and intellectual property.
 - No Liability: The creators of this guide disclaim all liability for any direct, indirect, incidental, or consequential damages resulting from the use or misuse of the information or tools provided. By using this guide, users agree to release the authors from any legal claims or liabilities arising from their actions.
-- 
+
 ## Requirements
 ### Hardware
 #### USB-to-serial (UART) adapter
@@ -24,7 +24,7 @@ Recommendation: Buy an adapter with a cable attached to it, like shown in the im
 ![image](resources/usb_uart_cable.png)
 
 #### Dashboard cable (risk & destruction free)
-To connect the USB adapter with the scooter you'll need a replacement dashboard cable. You can buy a ready-to-use dashboard breakout cable with pin headers here: [5 Pin Connector Plug (Female) Cable for e-Bike / e-Scooter + Pin Header Adapter](https://www.ebay.de/itm/356316680470).
+To connect the USB adapter with the scooter you'll need a replacement dashboard cable. You can buy a ready-to-use dashboard breakout cable with pin headers here: [eBay](https://www.ebay.de/itm/356316680470).
 
 Remark: Due to the pin spacing and small size of the dashboard connector, creating a DIY wiring solution is challenging and risks causing a short circuit between the pins. Alternate methods are possible, but require opening up the scooter (see [here](#alternate-methods-to-connect-the-uart-adapter)).
 
