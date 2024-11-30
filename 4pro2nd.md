@@ -1,4 +1,4 @@
-# 4 Pro 2nd Gen Tuning
+# 4 Pro 2nd gen Tuning
 
 ## Disclaimer
 Take special note of each point before proceeding:

@@ -25,7 +25,7 @@ If the scooter isn't on the list, its not supported.
 | Ninebot GT1, GT2                                                  |  ❌  |   ✅  |     ❌     |                        | Ninebot      | Change SN for higher speed. Guide [here](https://rollerplausch.com/threads/ninebot-gt1d-serial-unlock-60km-h-tuning-via-st-link.10790/). |
 | Ninebot G65                                                       |  ❌  |   ✅  |     ❌     |                        | Ninebot      |                                        |
 | Xiaomi Eletric Scooter 3 Lite, 4, 4 Lite, 4 Ultra                 |  ❌  |   ❌  |     ❌     |           ✅            | Brightway    | No SHFW Support planned. Check [this](https://github.com/dnandha/stlink-lks32/) for basic CFW, [this](https://github.com/scooterteam/bw-patcher) for more patches. |
-| Xiaomi Eletric Scooter 4 Pro 2nd gen                              |  ❌  |   ❌  |     ❌     |                        | Brightway    | No SHFW Support planned.                |
+| Xiaomi Eletric Scooter 4 Pro 2nd gen                              |  ❌  |   ❌  |     ❌     |                        | Brightway    | [4 Pro 2nd gen Tuning](/4pro2nd) |
 | Xiaomi Eletric Scooter  4 Lite 2nd gen                            |  ❌  |   ❌  |     ❌     |                        | LEQI         | No SHFW Support planned.                |
 | Xiaomi Eletric Scooter 4 Pro, 4 Pro Max, 4 Pro Plus               |  ❌  |   ❌  |     ❌     |                        | Ninebot      | Check [NGFW](https://nextgenfw.pythonanywhere.com/) for CFW Patcher. Base DRV [here](https://mi-fw-info.streamlit.app/). |
 | Ninebot E2                                                        |  ❌  |   ✅  |     ❌     |                        | Ninebot      |                                        |
