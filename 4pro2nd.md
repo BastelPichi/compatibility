@@ -23,8 +23,8 @@ Not tested: CP2102
 Recommendation: Buy an adapter with a cable attached to it, like shown in the image below. It will make your life a bit easier, since you won't have to buy additional DuPont wires to bridge pins.
 ![image](resources/usb_uart_cable.png)
 
-#### Dashboard cable (risk & destruction free)
-To connect the USB adapter with the scooter you'll need a replacement dashboard cable. You can buy a ready-to-use dashboard breakout cable with pin headers here: [eBay](https://www.ebay.de/itm/356316680470).
+#### Dashboard cable
+To connect the USB adapter with the scooter a risk-free method is to use a replacement dashboard cable. You can buy a ready-to-use dashboard breakout cable with pin headers here: [eBay](https://www.ebay.de/itm/356316680470).  ()
 
 Remark: Due to the pin spacing and small size of the dashboard connector, creating a DIY wiring solution is challenging and risks causing a short circuit between the pins. Alternate methods are possible, but require opening up the scooter (see [here](#alternate-methods-to-connect-the-uart-adapter)).
 
@@ -40,7 +40,7 @@ You can also run the tool locally from the BwFlasher source: [SourceCode](https:
 ## Procedure
 
 ### Step 1. Prepare cable
-Connect the UART adapter with the [dashboard cable](#dashboard-cable-(risk-&-destruction free)). Either directly, if you have an adapter with an attached cable, or with DuPont wires otherwise.
+Connect the UART adapter with the [dashboard cable](#dashboard-cable)). Either directly, if you have an adapter with an attached cable, or with DuPont wires otherwise.
 
 Dashboard cable | UART adapter
 -- | --
@@ -92,7 +92,7 @@ In BwFlasher, you should now see the progress bar advancing and updates appearin
 
 ### Finding out the COM port number
 On Windows: Open the Device Manager and look for "Ports (COM & LPT)". The UART adapter should show up there together with the COM port.
-![image](resources/bwflasher_port.png)
+![image](resources/bwflasher_port_2.png)
 
 ### Dashboard cable pinout
 ![image](resources/dash_cable_pinout.png)
