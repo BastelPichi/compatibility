@@ -102,7 +102,7 @@ Warning: Requires controller removal!
 
 If you don't have / want to buy a replacement dashboard cable, one of the following methods might work out for you:
 
-- Use a spare hall sensor cable in place of the original connector: cut it in half, solder or crimp the wires and connect them to the UART adapter (@encryptize).
+- Use a regular 5 pin JST connector, like a spare hall sensor cable, in place of the original connector: cut it in half, solder or crimp the wires and connect them to the UART adapter (@encryptize).
 - Pull out the pins of the original connector, then take new wires, crimp them and insert them into the connector. Connect the other end of the wires to the UART adapter.
 - Needle method (@turbojeet): Take household needles, cut off the wide thread ends and insert them into female dupont connectors. Stick those needles into the connector alongside the original pins / wires.
 - Soldering wires directly to the PCB: Unfeasible in this case, because the contacts are difficult to reach because of conformal coating / silicon.
