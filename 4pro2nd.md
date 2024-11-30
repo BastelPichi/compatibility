@@ -24,7 +24,7 @@ Recommendation: Buy an adapter with a cable attached to it, like shown in the im
 ![image](resources/usb_uart_cable.png)
 
 #### Dashboard cable
-To connect the USB adapter with the scooter a risk-free method is to use a replacement dashboard cable. You can buy a ready-to-use dashboard breakout cable with pin headers here: [eBay](https://www.ebay.de/itm/356316680470).
+To connect the USB adapter with the scooter a risk-free method is to use a replacement dashboard cable (female Julet type connector). You can buy a ready-to-use dashboard breakout cable with pin headers here: [eBay](https://www.ebay.de/itm/356316680470). This cable is guaranteed to fit, but you can look for other options as well.
 
 Remark: Due to the tight pin spacing and small size of the dashboard connector, creating a DIY wiring solution is challenging and risks causing a short circuit between the pins. Alternate methods are possible, but require opening up the scooter (see [here](#alternate-methods-to-connect-the-uart-adapter)).
 
