@@ -40,7 +40,7 @@ You can also run the tool locally from the BwFlasher source: [SourceCode](https:
 ## Procedure
 
 ### Step 1. Prepare cable
-Connect the UART adapter with the [dashboard cable](#dashboard-cable)). Either directly, if you have an adapter with an attached cable, or with DuPont wires otherwise.
+Connect the UART adapter with the breakout [dashboard cable](#dashboard-cable). Either directly, if you have an adapter with an attached cable, or with DuPont wires otherwise.
 
 Dashboard cable | UART adapter
 -- | --
@@ -60,15 +60,15 @@ Note: The wire colors for the UART adapter can vary. Check back with the supplie
 
 ### Step 2. Prepare patched firmware
 1. Visit this site: [mi-fw-info](https://mi-fw-info.streamlit.app)
-1. Download the **MCU firmware** update file for 4 Pro 2nd Gen
+1. Download the **MCU firmware** update file for "4 Pro (2nd Gen)"
 1. Visit this site: [bw-patcher](https://bw-patcher.streamlit.app)
 1. Upload firmware update file downloaded before
-1. Select "4pro2nd" and select the needed patches
+1. Select "4pro2nd" and check the needed patches
 1. Download patched firmware update file
 
 ### Step 3. Prepare flashing
 1. Start BwFlasher tool
-1. Check if the COM port is set correctly (see [here](#finding-out-the-com-port-number))
+1. Check if the COM port is correctly set (see [here](#finding-out-the-com-port-number))
 1. Select the patched firmware file
 
 
