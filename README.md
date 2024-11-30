@@ -21,11 +21,11 @@ If the scooter isn't on the list, its not supported.
 | Xiaomi Eletric Scooter M365                                       |  ❌  |   ✅  |     ✅     |            ❌          | Ninebot      | Flash M365-ProBLE.zip to use SHFW. Alternatively replace the dashboard with a non 4-dot one (pro/pro2 dashboard). |
 | Ninebot G2                                                        |  ✅  |   ✅  |     ✅     |            ✅          | Ninebot      |                                        |
 | Ninebot F65                                                       |  ❌  |   ✅  |     ❌     |                        | Ninebot      |                                        |
-| Ninebot F2, F2 Plus, F2 Pro                                       | (✅) |   ✅  |     ❌     |            ✅          | Ninebot      | [F2 Pro can run G2 SHFW.](/f2) |
+| Ninebot F2, F2 Plus, F2 Pro                                       | (✅) |   ✅  |     ❌     |            ✅          | Ninebot      | [F2 Pro can run G2 SHFW.](/f2.md) |
 | Ninebot GT1, GT2                                                  |  ❌  |   ✅  |     ❌     |                        | Ninebot      | Change SN for higher speed. Guide [here](https://rollerplausch.com/threads/ninebot-gt1d-serial-unlock-60km-h-tuning-via-st-link.10790/). |
 | Ninebot G65                                                       |  ❌  |   ✅  |     ❌     |                        | Ninebot      |                                        |
 | Xiaomi Eletric Scooter 3 Lite, 4, 4 Lite, 4 Ultra                 |  ❌  |   ❌  |     ❌     |           ✅            | Brightway    | No SHFW Support planned. Check [this](https://github.com/dnandha/stlink-lks32/) for basic CFW, [this](https://github.com/scooterteam/bw-patcher) for more patches. |
-| Xiaomi Eletric Scooter 4 Pro 2nd gen                              |  ❌  |   ❌  |     ❌     |                        | Brightway    | [4 Pro 2nd gen Tuning](/4pro2nd) |
+| Xiaomi Eletric Scooter 4 Pro 2nd gen                              |  ❌  |   ❌  |     ❌     |                        | Brightway    | [4 Pro 2nd gen Tuning](/4pro2nd.md) |
 | Xiaomi Eletric Scooter  4 Lite 2nd gen                            |  ❌  |   ❌  |     ❌     |                        | LEQI         | No SHFW Support planned.                |
 | Xiaomi Eletric Scooter 4 Pro, 4 Pro Max, 4 Pro Plus               |  ❌  |   ❌  |     ❌     |                        | Ninebot      | Check [NGFW](https://nextgenfw.pythonanywhere.com/) for CFW Patcher. Base DRV [here](https://mi-fw-info.streamlit.app/). |
 | Ninebot E2                                                        |  ❌  |   ✅  |     ❌     |                        | Ninebot      |                                        |
