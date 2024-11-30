@@ -24,9 +24,9 @@ Recommendation: Buy an adapter with a cable attached to it, like shown in the im
 ![image](resources/usb_uart_cable.png)
 
 #### Dashboard cable
-To connect the USB adapter with the scooter a risk-free method is to use a replacement dashboard cable. You can buy a ready-to-use dashboard breakout cable with pin headers here: [eBay](https://www.ebay.de/itm/356316680470).  ()
+To connect the USB adapter with the scooter a risk-free method is to use a replacement dashboard cable. You can buy a ready-to-use dashboard breakout cable with pin headers here: [eBay](https://www.ebay.de/itm/356316680470).
 
-Remark: Due to the pin spacing and small size of the dashboard connector, creating a DIY wiring solution is challenging and risks causing a short circuit between the pins. Alternate methods are possible, but require opening up the scooter (see [here](#alternate-methods-to-connect-the-uart-adapter)).
+Remark: Due to the tight pin spacing and small size of the dashboard connector, creating a DIY wiring solution is challenging and risks causing a short circuit between the pins. Alternate methods are possible, but require opening up the scooter (see [here](#alternate-methods-to-connect-the-uart-adapter)).
 
 #### DuPont wires (optional)
 If you have an UART adapter without an attached cable, you'll need a set of female-to-female DuPont wires. The wires should have 80-100cm length to reach the adapter end without tension. If you can't find female-to-female wires in that length, simply extend the wires with sets of male-to-female wires.
