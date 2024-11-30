@@ -1,4 +1,5 @@
 # 4 Pro 2nd gen Tuning
+This guide has been created by ScooterTeam.
 
 ## Disclaimer
 Take special note of each point before proceeding:
@@ -21,7 +22,7 @@ The following UART adapters are known to work:
 Not tested: CP2102
 
 Recommendation: Buy an adapter with a cable attached to it, like shown in the image below. It will make your life a bit easier, since you won't have to buy additional DuPont wires to bridge pins.
-![image](resources/usb_uart_cable.png)
+![image](res/usb_uart_cable.png)
 
 #### Dashboard cable
 To connect the USB adapter with the scooter a risk-free method is to use a replacement dashboard cable (female Julet type connector). You can buy a ready-to-use dashboard breakout cable with pin headers here: [eBay](https://www.ebay.de/itm/356316680470). This cable is guaranteed to fit, but you can look for other options as well.
@@ -30,7 +31,7 @@ Remark: Due to the tight pin spacing and small size of the dashboard connector, 
 
 #### DuPont wires (optional)
 If you have an UART adapter without an attached cable, you'll need a set of female-to-female DuPont wires. The wires should have 80-100cm length to reach the adapter end without tension. If you can't find female-to-female wires in that length, simply extend the wires with sets of male-to-female wires.
-![image](resources/dupont_collection.png)
+![image](res/dupont_collection.png)
 
 ### Software
 Download the BwFlasher standalone executable here: [BwFlasher](https://github.com/scooterteam/bw-flasher/releases/latest)
@@ -53,10 +54,10 @@ Black | /
 Note: The wire colors for the UART adapter can vary. Check back with the supplier which color is which.
 
 ##### A) UART adapter with attached cable
-![image](resources/uart_connection_direct.png)
+![image](res/uart_connection_direct.png)
 
 ##### B) UART adapter + DuPont wires
-![image](resources/uart_connection_dupont.png)
+![image](res/uart_connection_dupont.png)
 
 ### Step 2. Prepare patched firmware
 1. Visit this site: [mi-fw-info](https://mi-fw-info.streamlit.app)
@@ -92,10 +93,10 @@ In BwFlasher, you should now see the progress bar advancing and updates appearin
 
 ### Finding out the COM port number
 On Windows: Open the Device Manager and look for "Ports (COM & LPT)". The UART adapter should show up there together with the COM port.
-![image](resources/bwflasher_port_2.png)
+![image](res/bwflasher_port_2.png)
 
 ### Dashboard cable pinout
-![image](resources/dash_cable_pinout.png)
+![image](res/dash_cable_pinout.png)
 
 ### Alternate methods to connect the UART adapter
 Warning: Requires controller removal!

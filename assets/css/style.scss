@@ -9,6 +9,10 @@ body {
   margin: 0;
 }
 
+#web-spoiler {
+  display: none;
+}
+
 @media (prefers-color-scheme: light) {
   body {
     /*
