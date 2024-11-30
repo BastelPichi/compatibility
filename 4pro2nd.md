@@ -21,7 +21,7 @@ The following UART adapters are known to work:
 
 Not tested: CP2102
 
-Recommendation: Buy an adapter with a cable attached to it, like shown in the image below. It will make your life a bit easier, since you won't have to buy additional DuPont wires to bridge pins.
+Recommendation: Buy an adapter with a cable attached to it, like shown in the image below. It will make your life a bit easier, since you won't have to buy additional DuPont wires to bridge pins.  
 ![image](res/usb_uart_cable.png)
 
 #### Dashboard cable
@@ -30,8 +30,8 @@ To connect the USB adapter with the scooter a risk-free method is to use a repla
 Remark: Due to the tight pin spacing and small size of the dashboard connector, creating a DIY wiring solution is challenging and risks causing a short circuit between the pins. Alternate methods are possible, but require opening up the scooter (see [here](#alternate-methods-to-connect-the-uart-adapter)).
 
 #### DuPont wires (optional)
-If you have an UART adapter without an attached cable, you'll need a set of female-to-female DuPont wires. The wires should have 80-100cm length to reach the adapter end without tension. If you can't find female-to-female wires in that length, simply extend the wires with sets of male-to-female wires.
-![image](res/dupont_collection.png)
+If you have an UART adapter without an attached cable, you'll need a set of female-to-female DuPont wires. The wires should have 80-100cm length to reach the adapter end without tension. If you can't find female-to-female wires in that length, simply extend the wires with sets of male-to-female wires.  
+![image](res/dupont_collection.png)  
 
 ### Software
 Download the BwFlasher standalone executable here: [BwFlasher](https://github.com/scooterteam/bw-flasher/releases/latest)
@@ -92,7 +92,7 @@ In BwFlasher, you should now see the progress bar advancing and updates appearin
 ## Appendix
 
 ### Finding out the COM port number
-On Windows: Open the Device Manager and look for "Ports (COM & LPT)". The UART adapter should show up there together with the COM port.
+On Windows: Open the Device Manager and look for "Ports (COM & LPT)". The UART adapter should show up there together with the COM port.  
 ![image](res/bwflasher_port_2.png)
 
 ### Dashboard cable pinout
