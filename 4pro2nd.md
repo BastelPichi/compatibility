@@ -17,11 +17,10 @@ The following UART adapters are known to work:
 
 - CH340
 - FT232RL
+- [CP2102](https://github.com/BastelPichi/compatibility/issues/5)
 
 Caution with PL2303 type adapters:
 - PL2303**HX** works - but **HXA** does **not** (driver issues)
-
-Not tested: CP2102
 
 Tip: If you can find an adapter with a cable attached to it, you won't have to buy additional DuPont wires to bridge the pins.
 
