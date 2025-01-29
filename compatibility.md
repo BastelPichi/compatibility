@@ -19,9 +19,8 @@ If the scooter isn't on the list, its not supported.
 | Xiaomi Electric Scooter 1S                                        |  ✅  |   ✅  |     ✅     |     155 or above       | Ninebot      |                                        |
 | Xiaomi Electric Scooter 3                                         |  ✅  |   ✅  |     ✅     |     155 or above       | Ninebot      |                                        |
 | Xiaomi Eletric Scooter M365                                       |  ❌  |   ✅  |     ✅     |            ❌          | Ninebot      | Flash M365-ProBLE.zip to use SHFW. Alternatively replace the dashboard with a non 4-dot one (pro/pro2 dashboard). |
-| Ninebot G2                                                        |  ✅  |   ✅  |     ✅     |            ✅          | Ninebot      |                                        |
+| Ninebot G2, F2, F2 Plus, F2 Pro                                   |  ✅  |   ✅  |     ✅     |            ✅          | Ninebot      |                                        |
 | Ninebot F65                                                       |  ❌  |   ✅  |     ❌     |                        | Ninebot      |                                        |
-| Ninebot F2, F2 Plus, F2 Pro                                       | (✅) |   ✅  |     ❌     |            ✅          | Ninebot      | [F2 Pro can run G2 SHFW.](/f2) |
 | Ninebot GT1, GT2                                                  |  ❌  |   ✅  |     ❌     |                        | Ninebot      | Change SN for higher speed. Guide [here](https://rollerplausch.com/threads/ninebot-gt1d-serial-unlock-60km-h-tuning-via-st-link.10790/). |
 | Ninebot G65                                                       |  ❌  |   ✅  |     ❌     |                        | Ninebot      |                                        |
 | Xiaomi Eletric Scooter 3 Lite, 4, 4 Lite, 4 Ultra                 |  ❌  |   ❌  |     ❌     |           ✅            | Brightway    | No SHFW Support planned. Check [this](https://github.com/dnandha/stlink-lks32/) for basic CFW, [this](https://github.com/scooterteam/bw-patcher) for more patches. |
