@@ -31,5 +31,6 @@ If the scooter isn't on the list, its not supported.
 | Ninebot Air T15                                                   |  ❌  |   ✅  |     ❌     |                        | Ninebot      |                                        |
 | Ninebot P100                                                      |  ❌  |   ✅  |     ❌     |                        | Ninebot      |                                        |
 | Ninebot X160                                                      |  ❌  |   ✅  |     ❌     |                        | Ninebot      |                                        |
+| Segway ZT3 Pro, GT3, GT3 Pro, G3, E3, E3 Pro, F3, F3 Pro          |  ❌  |   ❌  |     ❌     |                        | Ninebot      | For the ZT3 Pro there is [basic CFW](https://github.com/scooterteam/ZT3Tools/). |
 
 
