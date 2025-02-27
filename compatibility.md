@@ -28,7 +28,7 @@ If the scooter isn't on the list, its not supported.
 | Xiaomi Eletric Scooter  4 Lite 2nd gen                            |  ❌  |   ❌  |     ❌     |                        | LEQI         | No SHFW Support planned.                |
 | Xiaomi Eletric Scooter 4 Pro, 4 Pro Max, 4 Pro Plus               |  ❌  |   ❌  |     ❌     |                        | Ninebot      | Check [NGFW](https://nextgenfw.pythonanywhere.com/) for CFW Patcher. Base DRV [here](https://mi-fw-info.streamlit.app/). |
 | Ninebot E2 (Plus)                                                 |  ❌  |   ✅  |     ❌     |                        | Ninebot      |                                        |
-| Ninebot E2 Pro                                                    |  ❌  |   ❌  |     ❌     |           ✅           | Ninebot      | Basic CFW in the works. Contact me if you have the Scooter and an ST-Link              |
+| Ninebot E2 Pro                                                    |  ❌  |   ❌  |     ❌     |           ✅           | Ninebot      | Basic CFW in the works. Contact me if you have the Scooter and an ST-Link contact me.   |
 | Ninebot Air T15                                                   |  ❌  |   ✅  |     ❌     |                        | Ninebot      |                                        |
 | Ninebot P100                                                      |  ❌  |   ✅  |     ❌     |                        | Ninebot      |                                        |
 | Ninebot X160                                                      |  ❌  |   ✅  |     ❌     |                        | Ninebot      |                                        |
