@@ -25,7 +25,7 @@ Caution with PL2303 type adapters:
 Tip: If you can find an adapter with a cable attached to it, you won't have to buy additional DuPont wires to bridge the pins.
 
 #### Dashboard cable
-To connect the USB adapter with the scooter a risk-free method is to use a replacement dashboard cable (female Julet type connector). You can buy a ready-to-use dashboard breakout cable with pin headers here: [eBay](https://www.ebay.de/itm/356418511323). This cable is guaranteed to fit, but you can look for other options as well, such as this one, which also includes the UART adapter: [eBay](https://www.ebay.com/itm/116467717525).
+To connect the USB adapter with the scooter a risk-free method is to use a replacement dashboard cable (female Julet type connector). You can buy a ready-to-use dashboard breakout cable with pin headers here: [eBay](https://www.ebay.de/itm/356418511323). This cable is guaranteed to fit, but you can look for other options as well, such as this one, which also includes the UART adapter: [eBay](https://www.ebay.com/itm/116498080143).
 
 Remark: Due to the tight pin spacing and small size of the dashboard connector, creating a DIY wiring solution is challenging and risks causing a short circuit between the pins. Alternate methods are possible, but require opening up the scooter (see [here](#alternate-methods-to-connect-the-uart-adapter)).
 
