@@ -1,5 +1,16 @@
 # Brightway Tuning
-This guide has been created by ScooterTeam. The method *should* be compatible with most, if not all, Brightway scooter models (though, only few recent models have been tested.)
+This guide has been created by ScooterTeam. The method *should* be compatible with most, if not all, Brightway scooter models.
+
+Model | Tested OK
+-- | -- 
+3 Lite | TBA
+4 | TBA 
+4 Pro 2nd Gen | ✅
+5 | TBA
+5 Max | TBA 
+5 Pro | ✅
+
+If you own one of the models listed as TBA and acknowledge the risk of bricking your scooter, try flashing an original firmware update file and report back the results by creating an issue here on GitHub.
 
 ## Disclaimer
 Take special note of each point before proceeding:
@@ -19,7 +30,7 @@ The following UART adapters are known to work:
 - FT232RL
 - [CP2102](https://github.com/BastelPichi/compatibility/issues/5)
 
-Caution with PL2303 type adapters:
+Important note on PL2303 type adapters:
 - PL2303**HX** works - but **HXA** does **not** (driver issues)
 
 Tip: If you can find an adapter with a cable attached to it, you won't have to buy additional DuPont wires to bridge the pins.
@@ -28,15 +39,18 @@ Tip: If you can find an adapter with a cable attached to it, you won't have to b
 To connect the USB adapter with the scooter a risk-free method is to use a replacement dashboard cable (Julet type connector).
 Depending on the scooter model the cable should have either a female or a male connector:
 
-Model | Plug
+Model | Connector
 -- | -- 
+3 Lite | Male
+4 | Male
 4 Pro 2nd Gen | Female
+5 | Female
+5 Max | Male
 5 Pro | Male
-5 / 5 Max | Male
 
-You can source a matching cable from China (varying quality / dimensions, needs soldering) or buy a ready-to-use dashboard breakout cables with pin headers on eBay: [female connector](https://www.ebay.de/itm/356681290474) or [male connector](https://www.ebay.de/itm/356888236112). These cables are guaranteed to fit, but you can look for other options as well, such as this one: [female connector](https://www.ebay.com/itm/116498080143). Remark: Due to the tight pin spacing and small size of the dashboard connector, creating a DIY wiring solution is challenging and risks causing a short circuit between the pins. Alternate methods are possible, but require opening up the scooter (see [here](#alternate-methods-to-connect-the-uart-adapter)).
+You can source a matching cable from China (needs soldering) or buy a ready-to-use dashboard breakout cables with pin headers on eBay: [female connector](https://www.ebay.de/itm/356681290474) or [male connector](https://www.ebay.de/itm/356888236112). These cables are guaranteed to fit, but you can look for other options as well, such as this one: [female connector](https://www.ebay.com/itm/116498080143). Remark: Due to the tight pin spacing and small size of the dashboard connector, creating a DIY wiring solution is challenging and risks causing a short circuit between the pins. Alternate methods are possible, but require opening up the scooter (see [here](#alternate-methods-to-connect-the-uart-adapter)).
 
-#### DuPont wires (optional)
+#### DuPont wires
 If you have a dashboard breakout cable with male pin headers and a standard UART adapter (without an attached cable), you'll need a set of DuPont female-to-female wires. The wires should have a minimum of 40-80cm length to reach the adapter end without tension. If you can't find female-to-female wires in that length, simply extend the wires with sets of male-to-female wires.
 
 ![image](res/dupont_collection.png)
