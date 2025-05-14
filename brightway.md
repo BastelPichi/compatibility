@@ -1,5 +1,5 @@
-# 4 Pro 2nd gen Tuning
-This guide has been created by ScooterTeam.
+# Brightway Tuning
+This guide has been created by ScooterTeam. The method *should* be compatible with most, if not all, Brightway scooter models (though, only few recent models have been tested.)
 
 ## Disclaimer
 Take special note of each point before proceeding:
@@ -25,13 +25,21 @@ Caution with PL2303 type adapters:
 Tip: If you can find an adapter with a cable attached to it, you won't have to buy additional DuPont wires to bridge the pins.
 
 #### Dashboard cable
-To connect the USB adapter with the scooter a risk-free method is to use a replacement dashboard cable (female Julet type connector). You can buy a ready-to-use dashboard breakout cable with pin headers here: [eBay](https://www.ebay.de/itm/356681290474). This cable is guaranteed to fit, but you can look for other options as well, such as this one, which also includes the UART adapter: [eBay](https://www.ebay.com/itm/116498080143).
+To connect the USB adapter with the scooter a risk-free method is to use a replacement dashboard cable (Julet type connector).
+Depending on the scooter model the cable should have either a female or a male connector:
 
-Remark: Due to the tight pin spacing and small size of the dashboard connector, creating a DIY wiring solution is challenging and risks causing a short circuit between the pins. Alternate methods are possible, but require opening up the scooter (see [here](#alternate-methods-to-connect-the-uart-adapter)).
+Model | Plug
+-- | -- 
+4 Pro 2nd Gen | Female
+5 Pro | Male
+5 / 5 Max | Male
 
-#### DuPont wires
-If you have a standard UART adapter (without an attached cable), you'll need a set of female-to-female DuPont wires. The wires should have a minimum of 40-800cm length to reach the adapter end without tension. If you can't find female-to-female wires in that length, simply extend the wires with sets of male-to-female wires.
-![image](res/dupont_collection.png)  
+You can source a matching cable from China (varying quality / dimensions, needs soldering) or buy a ready-to-use dashboard breakout cables with pin headers on eBay: [female connector](https://www.ebay.de/itm/356681290474) or [male connector](https://www.ebay.de/itm/356888236112). These cables are guaranteed to fit, but you can look for other options as well, such as this one: [female connector](https://www.ebay.com/itm/116498080143). Remark: Due to the tight pin spacing and small size of the dashboard connector, creating a DIY wiring solution is challenging and risks causing a short circuit between the pins. Alternate methods are possible, but require opening up the scooter (see [here](#alternate-methods-to-connect-the-uart-adapter)).
+
+#### DuPont wires (optional)
+If you have a dashboard breakout cable with male pin headers and a standard UART adapter (without an attached cable), you'll need a set of DuPont female-to-female wires. The wires should have a minimum of 40-80cm length to reach the adapter end without tension. If you can't find female-to-female wires in that length, simply extend the wires with sets of male-to-female wires.
+
+![image](res/dupont_collection.png)
 
 ### Software
 Download the BwFlasher standalone executable here: [BwFlasher](https://github.com/scooterteam/bw-flasher/releases/latest)
@@ -41,7 +49,7 @@ You can also run the tool locally from the BwFlasher source: [SourceCode](https:
 ## Procedure
 
 ### Step 1. Prepare cable
-Connect the UART adapter with the breakout [dashboard cable](#dashboard-cable). Either directly, if you have an adapter with an attached cable, or with DuPont wires otherwise.
+Connect the UART adapter with the breakout [dashboard cable](#dashboard-cable). Either directly, for example if you have an adapter with an attached cable, or with DuPont wires otherwise.
 
 Dashboard cable | Pinout
 -- | --
@@ -51,13 +59,13 @@ Green | TX
 Red | 5V
 Black | BTN
 
-Note: The wire colors for the UART adapter can vary. Check back with the supplier which color is which.
-
-##### A) UART adapter + DuPont wires
+#### A) UART adapter + DuPont wires
 ![image](res/uart_connection_dupont.png)
 
-##### B) UART adapter with attached cable
+#### B) UART adapter with attached cable
 ![image](res/uart_connection_direct.png)
+
+Note: The wire colors for the UART adapter can vary. Check back with the supplier which color is which.
 
 ### Step 2. Prepare patched firmware
 1. Visit this site: [mi-fw-info](https://mi-fw-info.streamlit.app)
