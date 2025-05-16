@@ -1,5 +1,5 @@
 # Brightway Tuning
-This guide has been created by ScooterTeam. The method *should* be compatible with most, if not all, Brightway scooter models.
+This guide has been created by ScooterTeam. The method *should* be compatible with most, if not all, Brightway scooter models (sold by Xiaomi under the Xiaomi name but produced by Brightway).
 
 Model | Tested OK
 -- | -- 
@@ -21,9 +21,19 @@ Take special note of each point before proceeding:
 - Legal Compliance: Users are solely responsible for ensuring that any modifications comply with applicable laws and regulations in their jurisdiction, including but not limited to those regarding speed limits, roadworthiness, and intellectual property.
 - No Liability: The creators of this guide disclaim all liability for any direct, indirect, incidental, or consequential damages resulting from the use or misuse of the information or tools provided. By using this guide, users agree to release the authors from any legal claims or liabilities arising from their actions.
 
+
 ## Requirements
 ### Hardware
-#### USB-to-serial (UART) adapter
+#### <ins>All-in-one "hacking kit"</ins>
+You may buy a worry-free tested and proven kit with every required hardware necessary and skip to to the actual flashing [here](#hardware-procedure).
+You can find a ready-to-use dashboard breakout cable with pin headers on eBay: [female connector](https://www.ebay.de/itm/356681290474) or [male connector](https://www.ebay.de/itm/356888236112). These cables are guaranteed to fit, but you can look for other options as well, such as this one: [female connector](https://www.ebay.com/itm/116498080143).
+
+Otherwise, you will have to source one of each, which we document below:
+
+<img src="https://i.imgur.com/hucq0m0.jpeg" alt="drawing" width="550"/>
+
+
+#### <ins>USB-to-serial (UART) adapter</ins>
 The following UART adapters are known to work:
 
 - CH340
@@ -33,13 +43,12 @@ The following UART adapters are known to work:
 Important note on PL2303 type adapters:
 - PL2303**HX** works - but **HXA** does **not** (driver issues)
 
-Tip: If you can find an adapter with a cable attached to it, you won't have to buy additional DuPont wires to bridge the pins.
 
-#### Dashboard cable
-To connect the USB adapter with the scooter a risk-free method is to use a replacement dashboard cable (Julet type connector).
-Depending on the scooter model the cable should have either a female or a male connector:
+#### <ins>Dashboard cable</ins>
+To connect the USB adapter with the scooter a risk-free method is to use a replacement dashboard cable (5 pin Julet connector).
+Depending on the scooter model the cable type you need to have is either a female or a male connector:
 
-Model | Connector
+Model | Connector needed
 -- | -- 
 3 Lite | Male
 4 | Male
@@ -48,22 +57,41 @@ Model | Connector
 5 Max | Male
 5 Pro | Male
 
-You can source a matching cable from China (needs soldering) or buy a ready-to-use dashboard breakout cables with pin headers on eBay: [female connector](https://www.ebay.de/itm/356681290474) or [male connector](https://www.ebay.de/itm/356888236112). These cables are guaranteed to fit, but you can look for other options as well, such as this one: [female connector](https://www.ebay.com/itm/116498080143). Remark: Due to the tight pin spacing and small size of the dashboard connector, creating a DIY wiring solution is challenging and risks causing a short circuit between the pins. Alternate methods are possible, but require opening up the scooter (see [here](#alternate-methods-to-connect-the-uart-adapter)).
+<img src="https://i.imgur.com/beOpkSx.jpeg" alt="drawing" width="300"/>
 
-#### DuPont wires
-If you have a dashboard breakout cable with male pin headers and a standard UART adapter (without an attached cable), you'll need a set of DuPont female-to-female wires. The wires should have a minimum of 40-80cm length to reach the adapter end without tension. If you can't find female-to-female wires in that length, simply extend the wires with sets of male-to-female wires.
+You can find dashboard cables (5 pin Julet connector) in local electronic stores or source from China (Aliexpress).
+Due to there being no standardized colour for each pin, make sure that where you buy it from lists which color cable connects to which pin hole in the dashboard cable. 
+
+If not, it is highly advisable to use a multimeter to check which cable runs to each pin, example (2 different Female dashboard cables from different sellers with different colors and totally different pinouts, ask me how i know):
+
+<img src="https://i.imgur.com/9pycXTP.jpeg" alt="drawing" width="500"/>
+
+On the female dashboard cable (5 pin female Julet connector), you can use a multimeter on continuity mode (if you dont know how, google is your friend), with the help of a sewing needle and aligator clips, and take note of which colored cable connects to each hole.
+
+<img src="https://i.imgur.com/a3YIaLY.jpeg" alt="drawing" width="800"/>
+
+On the male dashboard cable (5 pin male Julet connector), you can see the pinout in [dashboard cable](#dashboard-cable). Basically it is the same but mirrored.
+
+If this is too complicated for you, buy a ready to use cable [here](#all-in-one-hacking-kit).
+
+Remark: Due to the tight pin spacing and small size of the dashboard connector, creating a DIY wiring solution is challenging and risks causing a short circuit between the pins, see [Create custom female connector from DuPont wires](#alternate-methods-to-connect-the-uart-adapter)(only for scooters where you need a female dashboard cable). Alternate methods are possible, but require opening up the scooter (see [here](#alternate-methods-to-connect-the-uart-adapter)).
+
+#### <ins>DuPont wires</ins>
+If you have a dashboard breakout cable with male pin headers and a standard UART adapter (like the CH340 or FT232RL, UART's without an attached cable), you'll need a set of DuPont female-to-female wires. The wires should have a minimum of 40-80cm length to reach the adapter end without tension. If you can't find female-to-female wires in that length, simply extend the wires with sets of male-to-female wires.
 
 ![image](res/dupont_collection.png)
 
-### Software
-Download the BwFlasher standalone executable here: [BwFlasher](https://github.com/scooterteam/bw-flasher/releases/latest)
+## Hardware Procedure
 
-You can also run the tool locally from the BwFlasher source: [SourceCode](https://github.com/scooterteam/bw-flasher)
+### Step 1. Attach dupont connectors to your breakout dashboard cable:
 
-## Procedure
+You will need to either solder or crimp male (below left picture) or male (below right picture) dupont connectors to your dashboard cable, in order to later connect them to your UART:
 
-### Step 1. Prepare cable
-Connect the UART adapter with the breakout [dashboard cable](#dashboard-cable). Either directly, for example if you have an adapter with an attached cable, or with DuPont wires otherwise.
+<img src="https://i.imgur.com/6xUSE39.jpeg" alt="drawing" width="600"/>
+
+### Step 2. Connect the UART adapter with the breakout [dashboard cable](#dashboard-cable). 
+
+Either directly, for example if you have an adapter with an attached cable, or with DuPont wires otherwise. In the following example, the colors for each pinout are:
 
 Dashboard cable | Pinout
 -- | --
@@ -74,27 +102,41 @@ Red | 5V
 Black | BTN
 
 #### A) UART adapter + DuPont wires
-![image](res/uart_connection_dupont.png)
+<img src="https://i.imgur.com/nWvwyjR.jpeg" alt="drawing" width="600"/>
 
 #### B) UART adapter with attached cable
-![image](res/uart_connection_direct.png)
+<img src="https://i.imgur.com/UclvoHE.jpeg" alt="drawing" width="600"/>
 
-Note: The wire colors for the UART adapter can vary. Check back with the supplier which color is which.
+Note: Again, the wire colors for the UART adapter can vary. Check back with the supplier which color is which.
 
-### Step 2. Prepare patched firmware
+## Software Procedure
+
+### Step 1. Connect UART adapter to your computer and find out the COM port number
+On Windows: Open the Device Manager and look for "Ports (COM & LPT)". When you connect your UART adapter, something should show up there together with the COM port.  
+
+![image](res/bwflasher_port_2.png). 
+
+If something else appears, you might require drivers for your specific UART (again, google is your friend).
+
+### Step 2.
+Download the BwFlasher standalone executable here: [BwFlasher](https://github.com/scooterteam/bw-flasher/releases/latest)
+
+You can also run the tool locally from the BwFlasher source: [SourceCode](https://github.com/scooterteam/bw-flasher)
+
+### Step 3. Prepare patched firmware
 1. Visit this site: [mi-fw-info](https://mi-fw-info.streamlit.app)
-1. Download the **MCU firmware** update file for "4 Pro (2nd Gen)"
+1. Download the **MCU firmware** update file for the scooter you'll be flashing.
 1. Visit this site: [bw-patcher](https://bw-patcher.streamlit.app)
 1. Upload firmware update file downloaded before
-1. Select "4pro2nd" and check the needed patches
+1. Select your scooter model and check the needed patches
 1. Download patched firmware update file
 
-### Step 3. Prepare flashing
+### Step 4. Prepare flashing
 1. Start BwFlasher tool
 1. Check if the COM port is correctly set (see [here](#finding-out-the-com-port-number))
 1. Select the patched firmware file
 
-### Step 4. Turn on the scooter and start flashing
+### Step 5. Turn on the scooter and start flashing
 1. Remove the screws from the handlebar
 1. Pull out the handlebar shaft
 1. **Start the scooter** by pressing the ON button once
@@ -104,7 +146,7 @@ Note: The wire colors for the UART adapter can vary. Check back with the supplie
 
 In BwFlasher, you should now see the progress bar advancing and updates appearing in the log. Once the progress reaches 100%, check the log for the message "Flashing complete". If you see this message: Congratulations, your scooter is now modified.
 
-### Step 5. Assembly
+### Step 6. Re-Assembly
 1. Remove the adapter cable
 2. Plug in the dashboard cable
 3. Insert the handlebar shaft
@@ -112,15 +154,22 @@ In BwFlasher, you should now see the progress bar advancing and updates appearin
 
 ## Appendix
 
-### Finding out the COM port number
-On Windows: Open the Device Manager and look for "Ports (COM & LPT)". The UART adapter should show up there together with the COM port.  
-![image](res/bwflasher_port_2.png)
-
 ### Dashboard cable pinout
 ![image](res/dash_cable_pinout.png)
 
 ### Alternate methods to connect the UART adapter
 Warning: Requires controller removal!
+
+### Frequent problems
+
+Problem | Solution(s)
+-- | --
+Invalid FW File | You've probably downloaded wrong firmware file. Go back to mi-fw-info website and download MCU FW Details. Make sure to patch as the Xiaomi 4 pro gen 2
+Progress stuck at 5% or 45% | USB Port in computer doesn't have enough power. Use a USB hub, another USB port, or another PC
+Progress stuck at 0% (1) | The BWFlasher app is a bit buggy by nature. Sometimes it takes quite a few tries (open BWFlasher, load patch,start update, wait a few seconds, no progress, close app, open BW Flasher again and repeat until success). Basically turn off and on BWFlasher & retry a few times.
+Progress stuck at 0% (2) | Connect cables in this order: 1- Connect the UART adapter to the PC (w/ 5 pin cable); 2-Turn on the scooter, disconnect Scooter cables; 3- Connect UART/5 Pin cable to the scooter
+Progress stuck at 0% (3) | Make sure the Scooter is ON when you press "Start Update" and start flashing
+Progress stuck at 0% (4) | Make sure cables are fully seated In the UART pins. Make sure 5pin connector is well connected to the scooter
 
 If you don't have / want to buy a replacement dashboard cable, one of the following methods might work out for you:
 
