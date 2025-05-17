@@ -176,7 +176,7 @@ Problem | Solution(s)
 -- | --
 Invalid FW File | You've probably downloaded wrong firmware file. Go back to mi-fw-info website and download MCU FW Details. Make sure to patch as the Xiaomi 4 pro gen 2
 Progress stuck at 5% or 45% | USB Port in computer doesn't have enough power. Use a USB hub, another USB port, or another PC
-Progress stuck at 0% (1) | The BWFlasher app is a bit buggy by nature. Sometimes it takes quite a few tries (open BWFlasher, load patch,start update, wait a few seconds, no progress, close app, open BW Flasher again and repeat until success). Basically turn off and on BWFlasher & retry a few times.
+Progress stuck at 0% (1) | The BWFlasher app is a bit buggy by nature. Sometimes it takes quite a few tries (open BWFlasher, load patch, start update, wait a few seconds, no progress, close app, open BW Flasher again and repeat until success). Basically turn off and on BWFlasher & retry a few times.
 Progress stuck at 0% (2) | Connect cables in this order: 1- Connect the UART adapter to the PC (w/ 5 pin cable); 2-Turn on the scooter, disconnect Scooter cables; 3- Connect UART/5 Pin cable to the scooter
 Progress stuck at 0% (3) | Make sure the Scooter is ON when you press "Start Update" and start flashing
 Progress stuck at 0% (4) | Make sure cables are fully seated In the UART pins. Make sure 5pin connector is well connected to the scooter
