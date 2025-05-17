@@ -162,6 +162,14 @@ In BwFlasher, you should now see the progress bar advancing and updates appearin
 ### Alternate methods to connect the UART adapter
 Warning: Requires controller removal!
 
+If you don't have / want to buy a replacement dashboard cable, one of the following methods might work out for you:
+
+- Use a regular 5 pin JST connector, like a spare hall sensor cable, in place of the original connector: cut it in half, solder or crimp the wires and connect them to the UART adapter (@encryptize).
+- Pull out the pins of the original connector, then take new wires, crimp them and insert them into the connector. Connect the other end of the wires to the UART adapter.
+- Needle method (@turbojeet): Take household needles, cut off the wide thread ends and insert them into female dupont connectors. Stick those needles into the connector alongside the original pins / wires.
+- Soldering wires directly to the PCB: Unfeasible in this case, because the contacts are difficult to reach because of conformal coating / silicon.
+- Create custom female connector from DuPont wires (@KrYpz0n): [Video tutorial](https://www.youtube.com/watch?v=MEVXANRJ1IM)
+
 ### Frequent problems
 
 Problem | Solution(s)
@@ -172,11 +180,3 @@ Progress stuck at 0% (1) | The BWFlasher app is a bit buggy by nature. Sometimes
 Progress stuck at 0% (2) | Connect cables in this order: 1- Connect the UART adapter to the PC (w/ 5 pin cable); 2-Turn on the scooter, disconnect Scooter cables; 3- Connect UART/5 Pin cable to the scooter
 Progress stuck at 0% (3) | Make sure the Scooter is ON when you press "Start Update" and start flashing
 Progress stuck at 0% (4) | Make sure cables are fully seated In the UART pins. Make sure 5pin connector is well connected to the scooter
-
-If you don't have / want to buy a replacement dashboard cable, one of the following methods might work out for you:
-
-- Use a regular 5 pin JST connector, like a spare hall sensor cable, in place of the original connector: cut it in half, solder or crimp the wires and connect them to the UART adapter (@encryptize).
-- Pull out the pins of the original connector, then take new wires, crimp them and insert them into the connector. Connect the other end of the wires to the UART adapter.
-- Needle method (@turbojeet): Take household needles, cut off the wide thread ends and insert them into female dupont connectors. Stick those needles into the connector alongside the original pins / wires.
-- Soldering wires directly to the PCB: Unfeasible in this case, because the contacts are difficult to reach because of conformal coating / silicon.
-- Create custom female connector from DuPont wires (@KrYpz0n): [Video tutorial](https://www.youtube.com/watch?v=MEVXANRJ1IM)
