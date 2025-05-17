@@ -44,6 +44,7 @@ The following UART adapters are known to work:
 Important note on PL2303 type adapters:
 - PL2303**HX** works - but **HXA** does **not** (driver issues)
 
+Hint: Some adapters come with an attached USB cable, which makes additional DuPont wires or an extra USB cable unnecessary.
 
 #### <ins>Dashboard cable</ins>
 To connect the USB adapter with the scooter a risk-free method is to use a replacement dashboard cable (5 pin Julet connector).
