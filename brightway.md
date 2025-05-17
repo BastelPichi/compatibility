@@ -74,7 +74,7 @@ On the female dashboard cable (5 pin female Julet connector), you can use a mult
 
 On the male dashboard cable (5 pin male Julet connector), you can see the pinout in [dashboard cable](#dashboard-cable). Basically it is the same but mirrored.
 
-If this is too complicated for you, buy a ready to use cable [here](#all-in-one-hacking-kit).
+If this is too complicated for you, buy a ready to use cable [here](#ready-to-use-kit).
 
 Remark: Due to the tight pin spacing and small size of the dashboard connector, creating a DIY wiring solution is challenging and risks causing a short circuit between the pins, see [Create custom female connector from DuPont wires](#alternate-methods-to-connect-the-uart-adapter)(only for scooters where you need a female dashboard cable). Alternate methods are possible, but require opening up the scooter (see [here](#alternate-methods-to-connect-the-uart-adapter)).
 
