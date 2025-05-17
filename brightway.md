@@ -64,17 +64,17 @@ Model | Connector needed
 You can find dashboard cables (5 pin Julet connector) in local electronic stores or source from China (Aliexpress).
 Due to there being no standardized colour for each pin, make sure that where you buy it from lists which color cable connects to which pin hole in the dashboard cable. 
 
-If not, it is highly advisable to use a multimeter to check which cable runs to each pin, example (2 different Female dashboard cables from different sellers with different colors and totally different pinouts, ask me how i know):
+If not, it is highly advisable to use a multimeter to check which cable runs to each pin, example (2 different female dashboard cables from different sellers with different colors and totally different pinouts):
 
 <img src="https://i.imgur.com/9pycXTP.jpeg" alt="drawing" width="500"/>
 
-On the female dashboard cable (5 pin female Julet connector), you can use a multimeter on continuity mode (if you dont know how, google is your friend), with the help of a sewing needle and aligator clips, and take note of which colored cable connects to each hole.
+On the female dashboard cable (5 pin female Julet connector), you can use a multimeter on continuity mode (if you don't know how, Google is your friend), with the help of a sewing needle and aligator clips, and take note of which colored cable connects to each hole.
 
 <img src="https://i.imgur.com/a3YIaLY.jpeg" alt="drawing" width="800"/>
 
-On the male dashboard cable (5 pin male Julet connector), you can see the pinout in [dashboard cable](#dashboard-cable). Basically it is the same but mirrored.
+For the male dashboard cable (5 pin male Julet connector) check [this pinout](#dashboard-cable-pinout). Basically it is the same but mirrored.
 
-If this is too complicated for you, buy a ready to use cable [here](#ready-to-use-kit).
+If this is too complicated for you, buy a [ready-to-use cable](#ready-to-use-kit).
 
 Remark: Due to the tight pin spacing and small size of the dashboard connector, creating a DIY wiring solution is challenging and risks causing a short circuit between the pins, see [Create custom female connector from DuPont wires](#alternate-methods-to-connect-the-uart-adapter)(only for scooters where you need a female dashboard cable). Alternate methods are possible, but require opening up the scooter (see [here](#alternate-methods-to-connect-the-uart-adapter)).
 
