@@ -24,14 +24,15 @@ Take special note of each point before proceeding:
 
 ## Requirements
 ### Hardware
-#### <ins>All-in-one "hacking kit"</ins>
-You may buy a worry-free tested and proven kit with every required hardware necessary and skip to to the actual flashing [here](#hardware-procedure).
+
+For this method, you'll have to connect your scooter to your computer using an UART adapter and adapter cable.
+
+#### <ins>Ready-to-use kit</ins>
+You may buy a worry-free tested and proven kit with all required hardware necessary and skip to the actual flashing [here](#hardware-procedure).
+
 You can find a ready-to-use dashboard breakout cable with pin headers on eBay: [female connector](https://www.ebay.de/itm/356681290474) or [male connector](https://www.ebay.de/itm/356888236112). These cables are guaranteed to fit, but you can look for other options as well, such as this one: [female connector](https://www.ebay.com/itm/116498080143).
 
-Otherwise, you will have to source one of each, which we document below:
-
-<img src="https://i.imgur.com/hucq0m0.jpeg" alt="drawing" width="550"/>
-
+Otherwise, you will have to source one of each (documented below).
 
 #### <ins>USB-to-serial (UART) adapter</ins>
 The following UART adapters are known to work:
