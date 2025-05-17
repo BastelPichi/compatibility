@@ -32,7 +32,7 @@ You may buy a worry-free tested and proven kit with all required hardware necess
 
 You can find a ready-to-use dashboard breakout cable with pin headers on eBay: [female connector](https://www.ebay.de/itm/356681290474) or [male connector](https://www.ebay.de/itm/356888236112). These cables are guaranteed to fit, but you can look for other options as well, such as this one: [female connector](https://www.ebay.com/itm/116498080143).
 
-Otherwise, you will have to source one of each (documented below).
+Otherwise, you have the option to acquire the components needed individually (listed below).
 
 #### <ins>USB-to-serial (UART) adapter</ins>
 The following UART adapters are known to work:
