@@ -101,7 +101,7 @@ Black | BTN
    - Match the pinout according to the table above
 
 Example of UART adapter with attached cable:
-<img src="https://i.imgur.com/UclvoHE.jpeg" alt="UART with attached cable" width="600"/>
+![Dashboard Cable Pinout](res/uart_connection_direct.png)
 
 2. **Using DuPont Wires**:
    - Connect the dashboard cable to DuPont wires
@@ -109,20 +109,20 @@ Example of UART adapter with attached cable:
    - Ensure proper pinout matching
 
 Example of UART adapter with DuPont wires:
-<img src="https://i.imgur.com/nWvwyjR.jpeg" alt="UART with DuPont wires" width="600"/>
+![Dashboard Cable Pinout](res/uart_connection_dupont.png)
 
 > **Warning**: If you need to create a custom connection, consider these alternatives:
 > - Use a regular 5-pin JST connector (like a spare hall sensor cable)
 > - Pull out and replace pins in the original connector
-> - Use the needle method (requires careful handling)
+> - Use the sewing needle method (requires careful handling)
 > - Watch the [custom connector tutorial](https://www.youtube.com/watch?v=MEVXANRJ1IM)
 
 ## Flashing Instructions
 
 ### Step 1: Prepare Your Hardware
-1. Connect your UART adapter to your computer
-2. Note the COM port number (see [Finding COM Port](#finding-com-port))
-3. Connect the dashboard cable to your UART adapter
+1. Connect the dashboard cable to your UART adapter
+2. Connect your UART adapter to your computer
+3. Note the COM port number (see [Finding COM Port](#finding-com-port))
 
 ### Step 2: Get the Software
 1. Download [BwFlasher](https://github.com/scooterteam/bw-flasher/releases/latest)
@@ -162,15 +162,18 @@ Problem | Solution
 -- | --
 Invalid Firmware File | Download the correct MCU firmware from mi-fw-info
 Progress stuck at 5% or 45% | Try a different USB port or use a USB hub
-Progress stuck at 0% | Try these steps in order:
-1. Restart BwFlasher and retry
-2. Connect cables in this order:
+Progress stuck at 0% | Try the steps listed below in order
+
+### Steps to Fix "Progress stuck at 0%"
+1. Restart BwFlasher and retry flashing
+2. Make sure scooter is ON when starting update
+3. Make sure have the latest driver installed for your UART adapter
+4. Connect cables in this order:
    - Connect UART to PC
    - Turn ON scooter
    - Disconnect scooter cables
    - Connect UART cable to scooter
-3. Make sure scooter is ON when starting update
-4. Check all cable connections are secure
+5. Check all cable connections are secure
 
 ## Additional Resources
 
@@ -182,6 +185,8 @@ On Windows:
 1. Open Device Manager
 2. Look under "Ports (COM & LPT)"
 3. Your UART adapter should appear with a COM port number
+
+![Finding COM Port](res/bwflasher_port_2.png)
 
 > Note: If you don't see your adapter, you may need to install drivers for your specific UART model.
 
