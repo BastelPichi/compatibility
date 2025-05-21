@@ -8,6 +8,7 @@ This guide has been created by ScooterTeam.
 4. Follow the step-by-step [Flashing Instructions](#flashing-instructions)
 
 ## Supported Models
+
 | Model           | Tested OK |
 |----------------|-----------|
 | 3 Lite         | TBA       |
