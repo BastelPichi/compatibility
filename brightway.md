@@ -8,14 +8,16 @@ This guide has been created by ScooterTeam.
 4. Follow the step-by-step [Flashing Instructions](#flashing-instructions)
 
 ## Supported Models
-Model | Tested OK
--- | -- 
-3 Lite | TBA
-4 | TBA 
-4 Pro 2nd Gen | ✅
-5 | ✅
-5 Max | ✅
-5 Pro | ✅
+
+| Model           | Tested OK |
+|----------------|-----------|
+| 3 Lite         | TBA       |
+| 4              | TBA       |
+| 4 Pro 2nd Gen  | ✅         |
+| 5              | ✅         |
+| 5 Max          | ✅         |
+| 5 Pro          | ✅         |
+
 
 > Note: If you own a model marked as TBA (To Be Announced), please be aware that the process hasn't been fully tested yet. You can help by testing and reporting your results.
 
