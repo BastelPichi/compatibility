@@ -13,8 +13,8 @@ Model | Tested OK
 3 Lite | TBA
 4 | TBA 
 4 Pro 2nd Gen | ✅
-5 | TBA
-5 Max | TBA 
+5 | ✅
+5 Max | ✅
 5 Pro | ✅
 
 > Note: If you own a model marked as TBA (To Be Announced), please be aware that the process hasn't been fully tested yet. You can help by testing and reporting your results.
@@ -27,11 +27,14 @@ Before proceeding, please understand:
 3. **Legal**: Ensure your modifications comply with local laws
 4. **Risk**: You are responsible for any damage or issues that may occur
 
+> **Important**: This guide is provided solely for educational and research purposes. We do not endorse, recommend, or support any commercial activities related to scooter modification, including but not limited to: complete flashing kits, tuning services, modification services, or any other commercial products or services. Any modifications made to a scooter are done at the user's own risk and responsibility.
+
 > For complete legal information, please read the [Full Disclaimer](#full-disclaimer) at the bottom of this guide.
 
 ## Hardware Requirements
 
-First, check which connector type you need for your scooter:
+### Step 1: Check Your Scooter's Connector Type
+First, look at the table below to find your scooter model and its required connector type:
 
 Model | Required Connector
 -- | -- 
@@ -42,86 +45,105 @@ Model | Required Connector
 5 Max | Male
 5 Pro | Male
 
-You have two options to get the required hardware. Choose whichever is more convenient for you:
+> **What's the difference?**
+> - Male connector: Has pins that stick out
+> - Female connector: Has holes that the pins go into
+> 
+> You need to match your scooter's connector type exactly.
 
-### Option 1: Buy a Ready-to-Use Kit
-This is the easiest option if you want everything in one package. Buy the appropriate kit:
-- Female connector kit: [Link](https://www.ebay.de/itm/356681290474) or [Alternative](https://www.ebay.com/itm/116498080143)
-- Male connector kit: [Link](https://www.ebay.de/itm/356888236112)
+### Step 2: Get the Required Parts
+You'll need these three main components:
 
-### Option 2: Buy Components Separately
-This option gives you more flexibility and might be cheaper. You'll need to buy these components:
+#### 1. Dashboard Cable
+This is the cable that connects your scooter to the computer. You have two options:
 
-#### 1. USB-to-Serial (UART) Adapter
-Choose one of these tested models:
-- CH340
-- FT232RL
-- CP2102
-- PL2303HX (not HXA!)
+**Option A: Buy a Complete Cable Assembly (Recommended for Beginners)**
+- This is the easiest option
+- The cable should come with:
+  - M7 5-pin Julet connector (matching your scooter's type)
+  - Pre-attached DuPont headers
+  - Proper wire colors and pinout documentation
+- No soldering or special tools required
+- Look for these specifications:
+  - M7 size (not M6 or M8)
+  - 5-pin configuration
+  - Correct connector type (male/female)
+  - Clear pinout documentation
+- Example search results (for reference only):
+  - Female connector example: [M7 5-pin Julet Female Dashboard Cable](https://www.ebay.com/itm/356681290474)
+  - Male connector example: [M7 5-pin Julet Male Dashboard Cable](https://www.ebay.com/itm/356888236112)
+  > Note: These links are provided as examples of the type of product to look for. We do not endorse these specific sellers or products. Always verify specifications and seller reputation before purchasing.
 
-> ⚠️ Avoid PL2303HXA adapters - they have driver issues
+**Option B: Make Your Own Cable (For Advanced Users)**
+- Requires soldering or crimping skills
+- You'll need to source:
+  - M7 5-pin Julet connector
+  - Appropriate gauge wires
+  - DuPont headers
+- Tools needed:
+  - Soldering iron (30-40W) or crimping tool
+  - Lead-free solder
+  - Heat shrink tubing
+  - Wire strippers
+  - Multimeter for testing
 
-#### 2. Dashboard Cable
-You need a 5-pin Julet connector cable. Make sure to get the correct connector type (see table above).
+> **Important**: The dashboard connector is very small and delicate. Making your own cable is challenging and risky. We recommend using a complete cable assembly unless you have experience with electronics.
 
-> **Important**: Due to the tight pin spacing and small size of the dashboard connector, creating a DIY wiring solution is challenging and risks causing a short circuit between the pins.
+#### 2. USB-to-Serial Adapter
+This is the device that connects your cable to your computer. Look for these specifications:
+- USB to TTL/Serial conversion
+- 3.3V or 5V operation
+- Tested chipset options include:
+  - CH340
+  - FT232RL
+  - CP2102
+- Should have either:
+  - Pre-attached cable, or
+  - Pin headers for DuPont connections
 
-You can find dashboard cables in local electronic stores or online (e.g., Aliexpress). Due to there being no standardized color for each pin, make sure your supplier lists which color cable connects to which pin. If not, you'll need to use a multimeter to check the pinout.
+> **Note**: These adapters typically look like small USB sticks with pins or a cable attached.
 
-Example of different female dashboard cables from different sellers with different colors and pinouts:
-<img src="https://i.imgur.com/9pycXTP.jpeg" alt="Different dashboard cables" width="500"/>
+#### 3. DuPont Wires (Only if Needed)
+You'll need these if:
+- You're making your own cable, OR
+- Your USB adapter doesn't have a cable attached
 
-#### 3. DuPont Wires (if needed)
-If you have a dashboard breakout cable with male pin headers and a standard UART adapter (like the CH340 or FT232RL), you'll need:
+Specifications to look for:
 - Female-to-female DuPont wires
-- Minimum length: 40-80cm to reach the adapter without tension
-- If you can't find female-to-female wires in that length, you can extend them with male-to-female sets
+- Length: 40-80cm
+- Can be extended with male-to-female sets if needed
 
-> **Note**: Some UART adapters come with an attached USB cable, which makes additional DuPont wires unnecessary.
+### Step 3: Understand the Connections
+The dashboard cable has 5 wires that need to be connected correctly:
 
-### Hardware Connection Guide
-
-#### Dashboard Cable Pinout
-The standard pinout for the dashboard cable is:
-
-Dashboard cable | Pinout
+Wire Color | Purpose
 -- | --
-White | RX
-Yellow | GND
-Green | TX
-Red | 5V
-Black | BTN
+White | RX (Receive)
+Yellow | GND (Ground)
+Green | TX (Transmit)
+Red | 5V (Power)
+Black | BTN (Button)
 
-> **Note**: Wire colors may vary between different manufacturers. Always verify the pinout with a multimeter if unsure.
+> **Important**: Wire colors might be different on your cable. Always check the pinout with a multimeter if unsure.
 
-#### Connection Methods
+### Step 4: Connect Everything
+You have two ways to connect everything:
 
-1. **Direct Connection** (if UART adapter has attached cable):
-   - Connect the dashboard cable directly to the UART adapter
-   - Match the pinout according to the table above
+**Method 1: Direct Connection (Easiest)**
+- If your USB adapter has a cable attached
+- Simply connect the dashboard cable to the adapter
+- Match the wire colors/pinout
 
-Example of UART adapter with attached cable:
-![Dashboard Cable Pinout](res/uart_connection_direct.png)
-
-2. **Using DuPont Wires**:
-   - Connect the dashboard cable to DuPont wires
-   - Connect DuPont wires to the UART adapter
-   - Ensure proper pinout matching
-
-Example of UART adapter with DuPont wires:
-![Dashboard Cable Pinout](res/uart_connection_dupont.png)
-
-> **Warning**: If you need to create a custom connection, consider these alternatives:
-> - Use a regular 5-pin JST connector (like a spare hall sensor cable)
-> - Pull out and replace pins in the original connector
-> - Use the sewing needle method (requires careful handling)
-> - Watch the [custom connector tutorial](https://www.youtube.com/watch?v=MEVXANRJ1IM)
+**Method 2: Using DuPont Wires**
+- If your USB adapter has pins
+- Connect DuPont wires between the dashboard cable and adapter
+- Make sure to match the pinout correctly
 
 ## Flashing Instructions
 
 ### Step 1: Prepare Your Hardware
-1. Connect the dashboard cable to your UART adapter
-2. Connect your UART adapter to your computer
+1. Connect the dashboard cable to your USB adapter
+2. Connect your USB adapter to your computer
 3. Note the COM port number (see [Finding COM Port](#finding-com-port))
 
 ### Step 2: Get the Software
@@ -167,38 +189,82 @@ Progress stuck at 0% | Try the steps listed below in order
 ### Steps to Fix "Progress stuck at 0%"
 1. Restart BwFlasher and retry flashing
 2. Make sure scooter is ON when starting update
-3. Make sure have the latest driver installed for your UART adapter
+3. Make sure have the latest driver installed for your USB adapter
 4. Connect cables in this order:
-   - Connect UART to PC
+   - Connect USB adapter to PC
    - Turn ON scooter
    - Disconnect scooter cables
-   - Connect UART cable to scooter
+   - Connect USB adapter cable to scooter
 5. Check all cable connections are secure
 
 ## Additional Resources
-
-### Dashboard Cable Pinout
-![Dashboard Cable Pinout](res/dash_cable_pinout.png)
 
 ### Finding COM Port
 On Windows:
 1. Open Device Manager
 2. Look under "Ports (COM & LPT)"
-3. Your UART adapter should appear with a COM port number
+3. Your USB adapter should appear with a COM port number
 
 ![Finding COM Port](res/bwflasher_port_2.png)
 
-> Note: If you don't see your adapter, you may need to install drivers for your specific UART model.
+> Note: If you don't see your adapter, you may need to install drivers for your specific USB adapter model.
+
+### Advanced Connection Methods
+If you need to create a custom connection, consider these alternatives:
+
+1. **Using a JST Connector**:
+   - Use a regular 5-pin JST connector (like a spare hall sensor cable)
+   - Requires careful pin matching
+   - More forgiving than direct wiring
+
+2. **Pin Replacement Method**:
+   - Pull out and replace pins in the original connector
+   - Requires precision tools
+   - Preserves original connector housing
+
+3. **Sewing Needle Method**:
+   - Use sewing needles as temporary connectors
+   - Requires careful handling
+   - Good for testing before permanent solution
+
+> **Warning**: These methods are for advanced users only. They require careful handling and proper tools to avoid short circuits and damage.
+
+For a detailed tutorial on custom connector methods, you can watch this [custom connector tutorial](https://www.youtube.com/watch?v=MEVXANRJ1IM).
 
 ## Full Disclaimer
 This guide is provided with the following important notices:
 
-- **Informational Purposes Only**: The content of this guide is for educational and informational purposes only. It is not intended to promote or endorse the modification of scooter firmware or hardware, nor does it guarantee the safety, functionality, or legality of any modifications.
+- **Educational Purposes Only**: This guide is provided solely for educational and research purposes. The information contained herein is meant to help understand the technical aspects of scooter systems and should not be used to modify or alter any scooter's functionality.
 
-- **Warranty Voidance**: Modifying the scooter's firmware or hardware, including using reverse-engineered tools, may void the manufacturer's warranty. Users should review their warranty terms before making any modifications.
+- **No Endorsement**: This guide does not endorse, promote, or encourage the modification of scooter firmware or hardware. Any modifications made to a scooter are done at the user's own risk and responsibility.
 
-- **Assumption of Risk**: Modifying scooter firmware or hardware can pose significant risks, including but not limited to voiding warranties, compromising safety, reducing functionality, or violating legal regulations. By following this guide, users assume full responsibility for any and all outcomes, including personal injury, property damage, or legal penalties.
+- **Warranty Voidance**: Any modifications to the scooter's firmware or hardware will void the manufacturer's warranty. Users should carefully review their warranty terms and consider the implications before proceeding.
 
-- **Legal Compliance**: Users are solely responsible for ensuring that any modifications comply with applicable laws and regulations in their jurisdiction, including but not limited to those regarding speed limits, roadworthiness, and intellectual property.
+- **Legal Compliance**: Users must ensure compliance with all applicable laws and regulations in their jurisdiction, including but not limited to:
+  - Vehicle modification laws
+  - Speed limit regulations
+  - Road safety requirements
+  - Intellectual property laws
+  - Local transportation regulations
 
-- **No Liability**: The creators of this guide disclaim all liability for any direct, indirect, incidental, or consequential damages resulting from the use or misuse of the information or tools provided. By using this guide, users agree to release the authors from any legal claims or liabilities arising from their actions.
+- **Safety Risks**: Modifying scooter firmware or hardware can create serious safety hazards, including:
+  - Compromised braking systems
+  - Unstable handling
+  - Electrical system failures
+  - Fire hazards
+  - Personal injury risks
+
+- **No Liability**: The creators of this guide:
+  - Make no warranties about the accuracy or completeness of the information
+  - Are not responsible for any damages or injuries that may result from using this information
+  - Do not provide technical support or assistance with modifications
+  - Cannot be held liable for any direct, indirect, incidental, or consequential damages
+
+- **User Responsibility**: By using this guide, users acknowledge that they:
+  - Understand and accept all risks involved
+  - Are solely responsible for their actions and their consequences
+  - Will not hold the guide creators liable for any issues
+  - Will comply with all applicable laws and regulations
+  - Will ensure the safety of themselves and others
+
+This guide is provided "as is" without any express or implied warranties. Users proceed at their own risk and discretion.
