@@ -136,10 +136,16 @@ You have two ways to connect everything:
 - Simply connect the dashboard cable to the adapter
 - Match the wire colors/pinout
 
+Example of UART adapter with attached cable:
+![Dashboard Cable Pinout](res/uart_connection_direct.png)
+
 **Method 2: Using DuPont Wires**
 - If your USB adapter has pins
 - Connect DuPont wires between the dashboard cable and adapter
 - Make sure to match the pinout correctly
+
+Example of UART adapter with DuPont wires:
+![Dashboard Cable Pinout](res/uart_connection_dupont.png)
 
 ## Flashing Instructions
 
@@ -210,6 +216,9 @@ On Windows:
 ![Finding COM Port](res/bwflasher_port_2.png)
 
 > Note: If you don't see your adapter, you may need to install drivers for your specific USB adapter model.
+
+### Dashboard Cable Pinout
+![Dashboard Cable Pinout](res/dash_cable_pinout.png)
 
 ### Advanced Connection Methods
 If you need to create a custom connection, consider these alternatives:
