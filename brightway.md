@@ -217,8 +217,11 @@ On Windows:
 
 > Note: If you don't see your adapter, you may need to install drivers for your specific USB adapter model.
 
-### Dashboard Cable Pinout
-![Dashboard Cable Pinout](res/dash_cable_pinout.png)
+### Dashboard Cable Pinout for Mi 4 Pro Gen 2 and Mi 5 (Female
+![Dashboard Cable Pinout for Mi 4 Pro Gen 2 and Mi 5](res/dash_cable_pinout_m4pg2_m5.png)
+
+### Dashboard Cable Pinout for Mi 5 Pro and Max (Male)
+![Dashboard Cable Pinout for Mi 5 Pro and Max](res/dash_cable_pinout_m5_pm.png)
 
 ### Advanced Connection Methods
 If you need to create a custom connection, consider these alternatives:
