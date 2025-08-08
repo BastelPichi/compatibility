@@ -7,6 +7,9 @@ This guide has been created by ScooterTeam.
 3. Get the required hardware (see [Hardware Requirements](#hardware-requirements))
 4. Follow the step-by-step [Flashing Instructions](#flashing-instructions)
 
+## Mac remarks
+I am inserting this here, since some things gave me a headache. I did this with an Apple M1 Mac Studio in MacOS for a Xiaomi 5 Max. I got it to work, but it really took some tries. I will add some comments, just to make clear how things work (differently) on the Mac. The hardware requirements are exactly the same, it only gets interesting when we reach the "actually doing it" chapters.
+
 ## Supported Models
 
 | Model           | Tested OK |
@@ -99,6 +102,7 @@ This is the device that connects your cable to your computer. Look for these spe
   - CH340
   - FT232RL
   - CP2102
+  - For the Mac: I did it with a generic PL2303HX (which is old and not really supported anymore on Windows, but turned out OK an the Mac)
 - Should have either:
   - Pre-attached cable, or
   - Pin headers for DuPont connections
@@ -147,12 +151,22 @@ Example of UART adapter with attached cable:
 Example of UART adapter with DuPont wires:
 ![Dashboard Cable Pinout](res/uart_connection_dupont.png)
 
+**MAC: Drivers, drivers, drivers
+Mac users are not used to drivers. In this case, you need one. If - like me - you have one of those generic PL2303 adapters, go to the App Store by following ![this link](https://apps.apple.com/at/app/pl2303-serial/id1624835354?l=en-GB&mt=12) and install the PL2303 driver.
+To be sure, restart your computer after.
+
 ## Flashing Instructions
 
 ### Step 1: Prepare Your Hardware
 1. Connect the dashboard cable to your USB adapter
-2. Connect your USB adapter to your computer
+2. Connect your USB adapter to your computer (MAC: The flashing did not work for me - I got CRC errors and such - until I used a USB-C to USB-A adapter and plugged the contraption into one of the front ports on the Studio. It did not work via a USB hub!)
 3. Note the COM port number (see [Finding COM Port](#finding-com-port))
+
+#### Finding the COM port on the Mac
+Sorry,this needs it own chapter, since it really is a bitch. The steps are:
+1. Make sure your Mac sees the adapter. Open System Info and check the USB tree if the adapter is there
+2. If it is, open a Terminal window and enter 'ls -l /dev/uc.usbs*'. This will give you an output like '/dev/uc.usbserial-8310'
+3. This output (the whole line) is what you need to paste into the COM port field in BwFlasher (see below).
 
 ### Step 2: Get the Software
 1. Download [BwFlasher](https://github.com/scooterteam/bw-flasher/releases/latest)
@@ -167,7 +181,7 @@ Example of UART adapter with DuPont wires:
 
 ### Step 3: Flash Your Scooter
 1. Open BwFlasher
-2. Select your COM port
+2. Select your COM port (MAC: Nothing to select, you need to copy and paste the line from above)
 3. Choose your patched firmware file
 4. Prepare your scooter:
    - Remove handlebar screws
@@ -175,7 +189,7 @@ Example of UART adapter with DuPont wires:
    - Turn ON the scooter
    - Unplug the dashboard cable
    - Connect your adapter cable
-5. Click "Start Update" in BwFlasher
+5. Click "Start Update" in BwFlasher (MAC: If flashing fails, just restart it)
 6. Wait for "Flashing complete" message
 
 ### Step 4: Reassemble
@@ -216,6 +230,8 @@ On Windows:
 ![Finding COM Port](res/bwflasher_port_2.png)
 
 > Note: If you don't see your adapter, you may need to install drivers for your specific USB adapter model.
+
+On Mac: See above "Finding the COM port on the Mac"
 
 ### Dashboard Cable Pinout
 ![Dashboard Cable Pinout](res/dash_cable_pinout.png)
