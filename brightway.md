@@ -13,6 +13,7 @@ This guide has been created by ScooterTeam.
 |----------------|-----------|
 | 3 Lite         | TBA       |
 | 4              | TBA       |
+| 4 Lite         | TBA       |
 | 4 Pro 2nd Gen  | ✅         |
 | 5              | ✅         |
 | 5 Max          | ✅         |
