@@ -7,18 +7,19 @@ This guide has been created by ScooterTeam.
 3. Get the required hardware (see [Hardware Requirements](#hardware-requirements))
 4. Follow the step-by-step [Flashing Instructions](#flashing-instructions)
 
+A comprehensive video tutorial explaining every step in great detail is available on [YouTube](https://youtu.be/fUWCeF0GpME).
+
 ## Supported Models
 
-| Model           | Tested OK |
-|----------------|-----------|
-| 3 Lite         | TBA       |
-| 4              | TBA       |
-| 4 Lite         | TBA       |
-| 4 Pro 2nd Gen  | ✅         |
-| 5              | ✅         |
-| 5 Max          | ✅         |
-| 5 Pro          | ✅         |
-
+| Model           | Tested OK | Credits for testing |
+|-----------------|-----------|---------------------|
+| 3 Lite          | TBA       | TBA                 |
+| 4               | ✅        | Ilkan0342567        |
+| 4 Lite          | TBA       | TBA                 |
+| 4 Pro 2nd Gen   | ✅        | encryptize          |
+| 5               | ✅        | holow_rt            |
+| 5 Max           | ✅        | Lenny5292           |
+| 5 Pro           | ✅        | Krypz0n             |
 
 > Note: If you own a model marked as TBA (To Be Announced), please be aware that the process hasn't been fully tested yet. You can help by testing and reporting your results.
 
@@ -39,14 +40,15 @@ Before proceeding, please understand:
 ### Step 1: Check Your Scooter's Connector Type
 First, look at the table below to find your scooter model and its required connector type:
 
-Model | Required Connector
--- | -- 
-3 Lite | Male
-4 | Male
-4 Pro 2nd Gen | Female
-5 | Female
-5 Max | Male
-5 Pro | Male
+Model | Required Connector | Size | Notes
+-- | -- | -- | --
+3 Lite | Male | M8 |
+4 | Male | M8 |
+4 Lite | Male | M8 |
+4 Pro 2nd Gen | Female | M7 |
+5 | Female | M7 | Models manufactured in 2025 may use M6!
+5 Max | Male | M7 |
+5 Pro | Male | M7 |
 
 > **What's the difference?**
 > - Male connector: Has pins that stick out
@@ -219,7 +221,14 @@ On Windows:
 > Note: If you don't see your adapter, you may need to install drivers for your specific USB adapter model.
 
 ### Dashboard Cable Pinout
-![Dashboard Cable Pinout](res/dash_cable_pinout.png)
+
+Male and female connector pinouts are mirror images of each other - what appears on the left side of the male connector corresponds to the right side of the female connector, as this is how they physically mate together.
+
+#### Male Connector
+![Pinout for male connector](res/dash_cable_pinout_male.png)
+
+#### Female Connector
+![Pinout for female connector](res/dash_cable_pinout_female.png)
 
 ### Advanced Connection Methods
 If you need to create a custom connection, consider these alternatives:
@@ -242,6 +251,33 @@ If you need to create a custom connection, consider these alternatives:
 > **Warning**: These methods are for advanced users only. They require careful handling and proper tools to avoid short circuits and damage.
 
 For a detailed tutorial on custom connector methods, you can watch this [custom connector tutorial](https://www.youtube.com/watch?v=MEVXANRJ1IM).
+
+## Warning About Tuning Chips ⚠️
+
+Some sellers offer "tuning chips" or "plug-and-play speed modules" that claim to unlock higher speeds on your scooter. We strongly advise against using these devices for several important reasons:
+
+### Safety Risks
+- **Uncontrolled Modifications**: These chips often make arbitrary changes to motor parameters without proper validation
+- **Thermal Issues**: Can cause motor and controller overheating by bypassing safety limits
+- **Hardware Stress**: May push components beyond their design specifications
+- **Braking Problems**: Can interfere with regenerative braking systems
+- **Battery Damage**: Risk of battery cell degradation from excessive current draw
+
+### Technical Problems
+- **Unknown Quality**: No quality control or safety standards for these devices
+- **Permanent Damage**: Can cause irreversible damage to your scooter's electronics
+- **Reliability Issues**: Often use cheap components that can fail unexpectedly
+- **Inconsistent Results**: May work initially but cause problems over time
+- **No Support**: Usually no warranty or technical support available
+
+### Why Proper Firmware Is Better
+- **Controlled Changes**: Modifications are made with understanding of the system
+- **Reversible**: Can be reverted to stock firmware if needed
+- **Community Tested**: Changes are tested by the community
+- **Transparent**: You know exactly what modifications are being made
+- **Maintained**: Regular updates and bug fixes from the community
+
+> **Important**: Any device claiming to increase speed through a simple plug-in module should be treated with extreme skepticism. These devices often work by sending false signals to the controller, which can lead to dangerous operating conditions.
 
 ## Full Disclaimer
 This guide is provided with the following important notices:
