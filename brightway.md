@@ -15,7 +15,7 @@ A comprehensive video tutorial explaining every step in great detail is availabl
 |-----------------|-----------|---------------------|
 | 3 Lite          | TBA       | TBA                 |
 | 4               | ✅        | Ilkan0342567        |
-| 4 Lite          | TBA       | TBA                 |
+| 4 Lite          | ✅        | Gianluxx            |
 | 4 Pro 2nd Gen   | ✅        | encryptize          |
 | 5               | ✅        | holow_rt            |
 | 5 Max           | ✅        | Lenny5292           |
@@ -42,9 +42,9 @@ First, look at the table below to find your scooter model and its required conne
 
 Model | Required Connector | Size | Notes
 -- | -- | -- | --
-3 Lite | Male | M8 |
-4 | Male | M8 |
-4 Lite | Male | M8 |
+3 Lite | Male | M7 |
+4 | Male | M7 |
+4 Lite | Male | M7 |
 4 Pro 2nd Gen | Female | M7 |
 5 | Female | M7 | Models manufactured in 2025 may use M6!
 5 Max | Male | M7 |
