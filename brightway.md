@@ -16,10 +16,13 @@ A comprehensive video tutorial explaining every step in great detail is availabl
 | 3 Lite          | TBA       | TBA                 |
 | 4               | ✅        | Ilkan0342567        |
 | 4 Lite          | ✅        | Gianluxx            |
+| 4 Lite 2nd Gen  | TBA       | TBA                 |
+| 4 Ultra         | ✅        | Hypersniper_de      |
 | 4 Pro 2nd Gen   | ✅        | encryptize          |
 | 5               | ✅        | holow_rt            |
 | 5 Max           | ✅        | Lenny5292           |
 | 5 Pro           | ✅        | Krypz0n             |
+| 5 Elite         | ✅        | Turbojeet           |
 
 > Note: If you own a model marked as TBA (To Be Announced), please be aware that the process hasn't been fully tested yet. You can help by testing and reporting your results.
 
@@ -40,21 +43,24 @@ Before proceeding, please understand:
 ### Step 1: Check Your Scooter's Connector Type
 First, look at the table below to find your scooter model and its required connector type:
 
-Model | Required Connector | Size | Notes
--- | -- | -- | --
-3 Lite | Male | M7 |
-4 | Male | M7 |
-4 Lite | Male | M7 |
-4 Pro 2nd Gen | Female | M7 |
-5 | Female | M7 | Models manufactured in 2025 may use M6!
-5 Max | Male | M7 |
-5 Pro | Male | M7 |
+Model | Required Connector | Size | # Pins | Notes
+-- | -- | -- | -- | --
+3 Lite | Male | M7 | 5 |
+4 | Male | M7 | 5 |
+4 Lite | Male | M7 | 5 |
+4 Lite 2nd Gen | Male | M8 | 5 |
+4 Ultra | Male | M7 | 5 |
+4 Pro 2nd Gen | Female | M7 | 5 |
+5 | Female | M7 | 5 | Models manufactured in 2025 may use M6!
+5 Max | Male | M7 | 5 |
+5 Pro | Male | M7 | 5 |
+5 Elite | Male | M8 | 5 |
 
 > **What's the difference?**
 > - Male connector: Has pins that stick out
 > - Female connector: Has holes that the pins go into
 > 
-> You need to match your scooter's connector type exactly.
+> All connectors have 5 pins. You need to match your scooter's connector type exactly.
 
 ### Step 2: Get the Required Parts
 You'll need these three main components:
@@ -65,24 +71,25 @@ This is the cable that connects your scooter to the computer. You have two optio
 **Option A: Buy a Complete Cable Assembly (Recommended for Beginners)**
 - This is the easiest option
 - The cable should come with:
-  - M7 5-pin Julet connector (matching your scooter's type)
+  - M7/M8 5-pin Julet connector (depending on scooter model)
   - Pre-attached DuPont headers
   - Proper wire colors and pinout documentation
 - No soldering or special tools required
 - Look for these specifications:
-  - M7 size (not M6 or M8)
+  - M7/M8 size (depending on scooter model)
   - 5-pin configuration
   - Correct connector type (male/female)
   - Clear pinout documentation
-- Example search results (for reference only):
-  - Female connector example: [M7 5-pin Julet Female Dashboard Cable](https://www.ebay.com/itm/356681290474)
-  - Male connector example: [M7 5-pin Julet Male Dashboard Cable](https://www.ebay.com/itm/356888236112)
+- Examples (for reference only):
+  - M7 Female connector: [M7 5-pin Julet Female Dashboard Cable](https://www.ebay.com/itm/356681290474)
+  - M7 Male connector: [M7 5-pin Julet Male Dashboard Cable](https://www.ebay.com/itm/356888236112)
+  - M8 Male connector: [M8 5-pin Julet Male Dashboard Cable](https://www.ebay.de/itm/357880034139)
   > Note: These links are provided as examples of the type of product to look for. We do not endorse these specific sellers or products. Always verify specifications and seller reputation before purchasing.
 
 **Option B: Make Your Own Cable (For Advanced Users)**
 - Requires soldering or crimping skills
 - You'll need to source:
-  - M7 5-pin Julet connector
+  - M7/M8 5-pin Julet connector
   - Appropriate gauge wires
   - DuPont headers
 - Tools needed:
@@ -121,6 +128,10 @@ Specifications to look for:
 ### Step 3: Understand the Connections
 The dashboard cable has 5 wires that need to be connected correctly:
 
+> **Important**: Wire colors might be different on your cable. Always check the pinout with a multimeter if unsure.
+
+#### M7 cable
+
 Wire Color | Purpose
 -- | --
 White | RX (Receive)
@@ -129,26 +140,42 @@ Green | TX (Transmit)
 Red | 5V (Power)
 Black | BTN (Button)
 
-> **Important**: Wire colors might be different on your cable. Always check the pinout with a multimeter if unsure.
+#### M8 cable
+
+Wire Color | Purpose
+-- | --
+Blue | GND (Ground)
+Yellow | RX (Receive)
+Green | VCC (~38V)
+Red | TX (Transmit)
+Black | BAT (~38V)
+
+> **Note**: The dashboard powers on when the BAT line (38V) is **bridged to the VCC pin**
 
 ### Step 4: Connect Everything
 You have two ways to connect everything:
 
-**Method 1: Direct Connection (Easiest)**
+**Method 1: Using DuPont Wires**
+- If your USB adapter has pins
+- Connect DuPont wires between the dashboard cable and adapter
+- Make sure to match the pinout correctly
+
+#### M7 cable
+Example of UART adapter with DuPont wires:
+![Dashboard Cable Pinout (M7)](res/uart_connection_dupont.png)
+
+#### M8 cable
+Use three DuPont wires to connect GND, RX and TX of the dashboard cable with the adapter. Use a fourth DuPont wire to bridge the BAT pin to the VCC pin. Be extremely careful to match the pinout correctly, otherwise you might brick you USB adapter - or worst case your scooter. 
+Example of UART adapter with DuPont wires:
+![Dashboard Cable Pinout](res/leqi_uart_connection_dupont.png)
+
+**Method 2: Direct Connection**
 - If your USB adapter has a cable attached
 - Simply connect the dashboard cable to the adapter
 - Match the wire colors/pinout
 
 Example of UART adapter with attached cable:
 ![Dashboard Cable Pinout](res/uart_connection_direct.png)
-
-**Method 2: Using DuPont Wires**
-- If your USB adapter has pins
-- Connect DuPont wires between the dashboard cable and adapter
-- Make sure to match the pinout correctly
-
-Example of UART adapter with DuPont wires:
-![Dashboard Cable Pinout](res/uart_connection_dupont.png)
 
 ## Flashing Instructions
 
