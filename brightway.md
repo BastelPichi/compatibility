@@ -1,6 +1,29 @@
 # Brightway Scooter Tuning Guide
 This guide has been created by ScooterTeam.
 
+## Table of Contents
+- [Quick Start Guide](#quick-start-guide)
+- [Supported Models](#supported-models)
+- [Safety Warning](#safety-warning-)
+- [Hardware Requirements](#hardware-requirements)
+  - [Step 1: Check Your Scooter's Connector Type](#step-1-check-your-scooters-connector-type)
+  - [Step 2: Get the Required Parts](#step-2-get-the-required-parts)
+  - [Step 3: Connect Everything](#step-3-connect-everything)
+- [Flashing Instructions](#flashing-instructions)
+  - [Step 1: Prepare Your Hardware](#step-1-prepare-your-hardware)
+  - [Step 2: Get the Software](#step-2-get-the-software)
+  - [Step 3: Flash Your Scooter](#step-3-flash-your-scooter)
+  - [Step 4: Reassemble](#step-4-reassemble)
+- [Troubleshooting](#troubleshooting)
+  - [Common Issues and Solutions](#common-issues-and-solutions)
+  - [Steps to Fix "Progress stuck at 0%"](#steps-to-fix-progress-stuck-at-0)
+- [Additional Resources](#additional-resources)
+  - [Finding COM Port](#finding-com-port)
+  - [Dashboard Cable Pinout](#dashboard-cable-pinout)
+  - [Advanced Connection Methods](#advanced-connection-methods)
+- [Warning About Tuning Chips](#warning-about-tuning-chips-)
+- [Full Disclaimer](#full-disclaimer)
+
 ## Quick Start Guide
 1. Check if your scooter model is supported (see [Supported Models](#supported-models))
 2. Read the [Safety Warning](#safety-warning) carefully
@@ -10,23 +33,24 @@ This guide has been created by ScooterTeam.
 A comprehensive video tutorial explaining every step in great detail is available on [YouTube](https://youtu.be/fUWCeF0GpME).
 
 ## Supported Models
+### Scooter Model Compatibility
 
-| Model           | Tested OK | Credits for testing |
-|-----------------|-----------|---------------------|
-| 3 Lite          | TBA       | TBA                 |
-| 4               | ✅        | Ilkan0342567        |
-| 4 Lite          | ✅        | Gianluxx            |
-| 4 Lite 2nd Gen  | TBA       | TBA                 |
-| 4 Ultra         | ✅        | Hypersniper_de      |
-| 4 Pro 2nd Gen   | ✅        | encryptize          |
-| 5               | ✅        | holow_rt            |
-| 5 Max           | ✅        | Lenny5292           |
-| 5 Pro           | ✅        | Krypz0n             |
-| 5 Elite         | ✅        | Turbojeet           |
+| Model           | Manufacturer | Tested OK | Credits for testing |
+|-----------------|--------------|-----------|---------------------|
+| 3 Lite          | Brightway    | TBA       | TBA                 |
+| 4               | Brightway    | ✅        | Ilkan0342567        |
+| 4 Lite          | Brightway    | ✅        | Gianluxx            |
+| 4 Lite 2nd Gen  | Leqi         | TBA       | TBA                 |
+| 4 Ultra         | Brightway    | ✅        | Hypersniper_de      |
+| 4 Pro 2nd Gen   | Brightway    | ✅        | encryptize          |
+| 5               | Brightway    | ✅        | holow_rt            |
+| 5 Max           | Brightway    | ✅        | Lenny5292           |
+| 5 Pro           | Brightway    | ✅        | Krypz0n             |
+| 5 Elite         | Leqi         | ✅        | Turbojeet           |
 
 > Note: If you own a model marked as TBA (To Be Announced), please be aware that the process hasn't been fully tested yet. You can help by testing and reporting your results.
 
-## Safety Warning ⚠️
+## Safety Warning
 Before proceeding, please understand:
 
 1. **Warranty**: This process will void your scooter's warranty
@@ -125,12 +149,27 @@ Specifications to look for:
 - Length: 40-80cm
 - Can be extended with male-to-female sets if needed
 
-### Step 3: Understand the Connections
-The dashboard cable has 5 wires that need to be connected correctly:
+### Step 3: Connect Everything
+The dashboard cable has 5 wires that need to be connected correctly. The pinout varies depending on the connector size, which correlates with the scooter's manufacturer.
+Steps:
+- Connect DuPont wires between the dashboard cable and adapter
+- Make sure to match the pinout correctly
+
+#### Dashboard Cable Pinout
+
+Male and female connector pinouts are mirror images of each other - what appears on the left side of the male connector corresponds to the right side of the female connector, as this is how they physically mate together.
+
+##### Male Connector
+![Pinout for male connector](res/dash_cable_pinout_male.png)
+
+##### Female Connector
+![Pinout for female connector](res/dash_cable_pinout_female.png)
+
+---
 
 > **Important**: Wire colors might be different on your cable. Always check the pinout with a multimeter if unsure.
 
-#### M7 cable
+#### M7 cable (Brightway models)
 
 Wire Color | Purpose
 -- | --
@@ -140,7 +179,12 @@ Green | TX (Transmit)
 Red | 5V (Power)
 Black | BTN (Button)
 
-#### M8 cable
+Use three DuPont wires to connect GND, RX and TX of the dashboard cable with the adapter. To power on the scooter (trigger) in case it shuts down, you can bridge the **BTN** pin to the **5V** pin momentarily.
+
+Connection example of UART adapter with DuPont wires:
+![Dashboard Cable Pinout (M7)](res/uart_connection_dupont_bw.png)
+
+#### M8 cable (Leqi models)
 
 Wire Color | Purpose
 -- | --
@@ -150,32 +194,12 @@ Green | VCC (~38V)
 Red | TX (Transmit)
 Black | BAT (~38V)
 
-> **Note**: The dashboard powers on when the BAT line (38V) is **bridged to the VCC pin**
+> **Note**: The dashboard is only powered on as long as the BAT line (38V) is **bridged to the VCC pin**!
 
-### Step 4: Connect Everything
-You have two ways to connect everything:
+Use three DuPont wires to connect GND, RX and TX of the dashboard cable with the adapter. Use a fourth DuPont wire to bridge the BAT pin to the VCC pin. Be extremely careful to match the pinout correctly, otherwise you might brick **your** USB adapter - or worst case your scooter. It's best to avoid DIY solutions for this kind of connection.
 
-**Method 1: Using DuPont Wires**
-- If your USB adapter has pins
-- Connect DuPont wires between the dashboard cable and adapter
-- Make sure to match the pinout correctly
-
-#### M7 cable
-Example of UART adapter with DuPont wires:
-![Dashboard Cable Pinout (M7)](res/uart_connection_dupont.png)
-
-#### M8 cable
-Use three DuPont wires to connect GND, RX and TX of the dashboard cable with the adapter. Use a fourth DuPont wire to bridge the BAT pin to the VCC pin. Be extremely careful to match the pinout correctly, otherwise you might brick you USB adapter - or worst case your scooter. 
-Example of UART adapter with DuPont wires:
-![Dashboard Cable Pinout](res/leqi_uart_connection_dupont.png)
-
-**Method 2: Direct Connection**
-- If your USB adapter has a cable attached
-- Simply connect the dashboard cable to the adapter
-- Match the wire colors/pinout
-
-Example of UART adapter with attached cable:
-![Dashboard Cable Pinout](res/uart_connection_direct.png)
+Connection example of UART adapter with DuPont wires:
+![Dashboard Cable Pinout](res/uart_connection_dupont_leqi.png)
 
 ## Flashing Instructions
 
@@ -247,16 +271,6 @@ On Windows:
 
 > Note: If you don't see your adapter, you may need to install drivers for your specific USB adapter model.
 
-### Dashboard Cable Pinout
-
-Male and female connector pinouts are mirror images of each other - what appears on the left side of the male connector corresponds to the right side of the female connector, as this is how they physically mate together.
-
-#### Male Connector
-![Pinout for male connector](res/dash_cable_pinout_male.png)
-
-#### Female Connector
-![Pinout for female connector](res/dash_cable_pinout_female.png)
-
 ### Advanced Connection Methods
 If you need to create a custom connection, consider these alternatives:
 
@@ -279,7 +293,7 @@ If you need to create a custom connection, consider these alternatives:
 
 For a detailed tutorial on custom connector methods, you can watch this [custom connector tutorial](https://www.youtube.com/watch?v=MEVXANRJ1IM).
 
-## Warning About Tuning Chips ⚠️
+## Warning About Tuning Chips
 
 Some sellers offer "tuning chips" or "plug-and-play speed modules" that claim to unlock higher speeds on your scooter. We strongly advise against using these devices for several important reasons:
 
