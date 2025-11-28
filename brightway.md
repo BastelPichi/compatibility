@@ -5,6 +5,7 @@ This guide has been created by ScooterTeam.
 - [Quick Start Guide](#quick-start-guide)
 - [Supported Models](#supported-models)
 - [Safety Warning](#safety-warning-)
+- [Warning About Tuning Chips](#warning-about-tuning-chips-)
 - [Hardware Requirements](#hardware-requirements)
   - [Step 1: Check Your Scooter's Connector Type](#step-1-check-your-scooters-connector-type)
   - [Step 2: Get the Required Parts](#step-2-get-the-required-parts)
@@ -21,7 +22,6 @@ This guide has been created by ScooterTeam.
   - [Finding COM Port](#finding-com-port)
   - [Dashboard Cable Pinout](#dashboard-cable-pinout)
   - [Advanced Connection Methods](#advanced-connection-methods)
-- [Warning About Tuning Chips](#warning-about-tuning-chips-)
 - [Full Disclaimer](#full-disclaimer)
 
 ## Quick Start Guide
@@ -61,6 +61,30 @@ Before proceeding, please understand:
 > **Important**: This guide is provided solely for educational and research purposes. We do not endorse, recommend, or support any commercial activities related to scooter modification, including but not limited to: complete flashing kits, tuning services, modification services, or any other commercial products or services. Any modifications made to a scooter are done at the user's own risk and responsibility.
 
 > For complete legal information, please read the [Full Disclaimer](#full-disclaimer) at the bottom of this guide.
+
+## Warning About Tuning Chips
+
+Some sellers offer "tuning chips" or "plug-and-play speed modules" that claim to unlock higher speeds on your scooter. We strongly advise against using these devices for several important reasons:
+
+### Safety Risks
+- **Uncontrolled Modifications**: These chips often make arbitrary changes to motor parameters without proper validation
+- **Throttle Problems**: Can interfere with throttle control
+- **Braking Problems**: Can interfere with regenerative braking systems
+- **Bad Respose Time**: The chips introduce delay and will lead to both a delay in the control response and displayed values
+
+### Technical Problems
+- **Unknown Quality**: No quality control or safety standards for these devices
+- **Permanent Damage**: Can cause irreversible damage to your scooter's electronics
+- **Reliability Issues**: May work initially but cause problems over time
+- **No Support**: Usually no warranty or technical support available
+
+### Why Proper Firmware Is Better
+- **Controlled Changes**: Modifications are made with understanding of the system
+- **Reversible**: Can be reverted to stock firmware if needed
+- **Community Tested**: Changes are tested by the community
+- **Transparent**: You know exactly what modifications are being made
+
+> **Important**: Any device claiming to increase speed through a simple plug-in module should be treated with extreme skepticism. These devices often work by sending false signals to the controller, which can lead to dangerous operating conditions.
 
 ## Hardware Requirements
 
@@ -292,33 +316,6 @@ If you need to create a custom connection, consider these alternatives:
 > **Warning**: These methods are for advanced users only. They require careful handling and proper tools to avoid short circuits and damage.
 
 For a detailed tutorial on custom connector methods, you can watch this [custom connector tutorial](https://www.youtube.com/watch?v=MEVXANRJ1IM).
-
-## Warning About Tuning Chips
-
-Some sellers offer "tuning chips" or "plug-and-play speed modules" that claim to unlock higher speeds on your scooter. We strongly advise against using these devices for several important reasons:
-
-### Safety Risks
-- **Uncontrolled Modifications**: These chips often make arbitrary changes to motor parameters without proper validation
-- **Thermal Issues**: Can cause motor and controller overheating by bypassing safety limits
-- **Hardware Stress**: May push components beyond their design specifications
-- **Braking Problems**: Can interfere with regenerative braking systems
-- **Battery Damage**: Risk of battery cell degradation from excessive current draw
-
-### Technical Problems
-- **Unknown Quality**: No quality control or safety standards for these devices
-- **Permanent Damage**: Can cause irreversible damage to your scooter's electronics
-- **Reliability Issues**: Often use cheap components that can fail unexpectedly
-- **Inconsistent Results**: May work initially but cause problems over time
-- **No Support**: Usually no warranty or technical support available
-
-### Why Proper Firmware Is Better
-- **Controlled Changes**: Modifications are made with understanding of the system
-- **Reversible**: Can be reverted to stock firmware if needed
-- **Community Tested**: Changes are tested by the community
-- **Transparent**: You know exactly what modifications are being made
-- **Maintained**: Regular updates and bug fixes from the community
-
-> **Important**: Any device claiming to increase speed through a simple plug-in module should be treated with extreme skepticism. These devices often work by sending false signals to the controller, which can lead to dangerous operating conditions.
 
 ## Full Disclaimer
 This guide is provided with the following important notices:
