@@ -209,7 +209,7 @@ Black | BAT (~38V)
 
 > **Note**: The dashboard is only powered on as long as the BAT line (38V) is **bridged to the VCC pin**!
 
-Use three DuPont wires to connect GND, RX and TX of the dashboard cable with the adapter. Use a fourth DuPont wire to bridge the BAT pin to the VCC pin. Be extremely careful to match the pinout correctly, otherwise you might brick **your** USB adapter - or worst case your scooter. It's best to avoid DIY solutions for this kind of connection.
+Use three DuPont wires to connect GND, RX and TX of the dashboard cable with the adapter. Use a fourth DuPont wire to bridge the BAT pin to the VCC pin. Be extremely careful to match the pinout correctly, otherwise you might **brick** your USB adapter or worst case your scooter.
 
 Connection example of UART adapter with DuPont wires:
 ![Dashboard Cable Pinout](res/uart_connection_dupont_leqi.png)
