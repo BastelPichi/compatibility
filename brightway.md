@@ -67,24 +67,24 @@ Before proceeding, please understand:
 ### Step 1: Check Your Scooter's Connector Type
 First, look at the table below to find your scooter model and its required connector type:
 
-Model | Required Connector | Size | # Pins | Notes
+> All connectors have 5 pins. You need to match your scooter's connector type exactly.
+
+Model | Required Connector | Size | Notes
 -- | -- | -- | -- | --
-3 Lite | Male | M7 | 5 |
-4 | Male | M7 | 5 |
-4 Lite | Male | M7 | 5 |
-4 Lite 2nd Gen | Male | M8 | 5 |
-4 Ultra | Male | M7 | 5 |
-4 Pro 2nd Gen | Female | M7 | 5 |
-5 | Female | M7 | 5 | Models manufactured in 2025 may use M6!
-5 Max | Male | M7 | 5 |
-5 Pro | Male | M7 | 5 |
-5 Elite | Male | M8 | 5 |
+3 Lite | Male | M7 | 
+4 | Male | M7 | 
+4 Lite | Male | M7 | 
+4 Lite 2nd Gen | Male | M8 | 
+4 Ultra | Male | M7 | 
+4 Pro 2nd Gen | Female | M7 | 
+5 | Female | M7 | Models manufactured in 2025 may use M6!
+5 Max | Male | M7 | 
+5 Pro | Male | M7 | 
+5 Elite | Male | M8 | 
 
 > **What's the difference?**
 > - Male connector: Has pins that stick out
 > - Female connector: Has holes that the pins go into
-> 
-> All connectors have 5 pins. You need to match your scooter's connector type exactly.
 
 ### Step 2: Get the Required Parts
 You'll need these three main components:
