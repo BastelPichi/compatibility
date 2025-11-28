@@ -94,7 +94,7 @@ First, look at the table below to find your scooter model and its required conne
 > All connectors have 5 pins. You need to match your scooter's connector type exactly.
 
 Model | Required Connector | Size | Notes
--- | -- | -- | -- | --
+--- | --- | --- | ---
 3 Lite | Male | M7 | 
 4 | Male | M7 | 
 4 Lite | Male | M7 | 
