@@ -1,4 +1,4 @@
-# Brightway Scooter Tuning Guide
+# Brightway / LEQI Scooter Tuning Guide
 This guide has been created by ScooterTeam.
 
 ## Table of Contents
