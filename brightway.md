@@ -163,10 +163,10 @@ This is the device that connects your cable to your computer. Look for these spe
 
 > **Note**: These adapters typically look like small USB sticks with pins or a cable attached.
 
-#### 3. DuPont Wires (Only if Needed)
+#### 3. DuPont Wires
 You'll need these if:
-- You're making your own cable, OR
-- Your USB adapter doesn't have a cable attached
+- You have a LEQI device (to bridge the connection)
+- AND/OR, You want to extend the cable length from USB adapter to dashboard cable for more comfort
 
 Specifications to look for:
 - Female-to-female DuPont wires
@@ -175,21 +175,10 @@ Specifications to look for:
 
 ### Step 3: Connect Everything
 The dashboard cable has 5 wires that need to be connected correctly. The pinout varies depending on the connector size, which correlates with the scooter's manufacturer.
+
 Steps:
 - Connect DuPont wires between the dashboard cable and adapter
-- Make sure to match the pinout correctly
-
-#### Dashboard Cable Pinout
-
-Male and female connector pinouts are mirror images of each other - what appears on the left side of the male connector corresponds to the right side of the female connector, as this is how they physically mate together.
-
-##### Male Connector
-![Pinout for male connector](res/dash_cable_pinout_male.png)
-
-##### Female Connector
-![Pinout for female connector](res/dash_cable_pinout_female.png)
-
----
+- Make sure to match the pinout correctly (see below)
 
 > **Important**: Wire colors might be different on your cable. Always check the pinout with a multimeter if unsure.
 
@@ -284,6 +273,16 @@ Progress stuck at 0% | Try the steps listed below in order
 5. Check all cable connections are secure
 
 ## Additional Resources
+
+### Dashboard Cable Pinout
+
+Male and female connector pinouts are mirror images of each other - what appears on the left side of the male connector corresponds to the right side of the female connector, as this is how they physically mate together.
+
+#### Male Connector
+![Pinout for male connector](res/dash_cable_pinout_male.png)
+
+#### Female Connector
+![Pinout for female connector](res/dash_cable_pinout_female.png)
 
 ### Finding COM Port
 On Windows:
