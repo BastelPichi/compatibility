@@ -1,5 +1,28 @@
-# Brightway Scooter Tuning Guide
+# Brightway / LEQI Scooter Tuning Guide
 This guide has been created by ScooterTeam.
+
+## Table of Contents
+- [Quick Start Guide](#quick-start-guide)
+- [Supported Models](#supported-models)
+- [Safety Warning](#safety-warning-)
+- [Warning About Tuning Chips](#warning-about-tuning-chips-)
+- [Hardware Requirements](#hardware-requirements)
+  - [Step 1: Check Your Scooter's Connector Type](#step-1-check-your-scooters-connector-type)
+  - [Step 2: Get the Required Parts](#step-2-get-the-required-parts)
+  - [Step 3: Connect Everything](#step-3-connect-everything)
+- [Flashing Instructions](#flashing-instructions)
+  - [Step 1: Prepare Your Hardware](#step-1-prepare-your-hardware)
+  - [Step 2: Get the Software](#step-2-get-the-software)
+  - [Step 3: Flash Your Scooter](#step-3-flash-your-scooter)
+  - [Step 4: Reassemble](#step-4-reassemble)
+- [Troubleshooting](#troubleshooting)
+  - [Common Issues and Solutions](#common-issues-and-solutions)
+  - [Steps to Fix "Progress stuck at 0%"](#steps-to-fix-progress-stuck-at-0)
+- [Additional Resources](#additional-resources)
+  - [Finding COM Port](#finding-com-port)
+  - [Dashboard Cable Pinout](#dashboard-cable-pinout)
+  - [Advanced Connection Methods](#advanced-connection-methods)
+- [Full Disclaimer](#full-disclaimer)
 
 ## Quick Start Guide
 1. Check if your scooter model is supported (see [Supported Models](#supported-models))
@@ -10,20 +33,24 @@ This guide has been created by ScooterTeam.
 A comprehensive video tutorial explaining every step in great detail is available on [YouTube](https://youtu.be/fUWCeF0GpME).
 
 ## Supported Models
+### Scooter Model Compatibility
 
-| Model           | Tested OK | Credits for testing |
-|-----------------|-----------|---------------------|
-| 3 Lite          | TBA       | TBA                 |
-| 4               | ✅        | Ilkan0342567        |
-| 4 Lite          | ✅        | Gianluxx            |
-| 4 Pro 2nd Gen   | ✅        | encryptize          |
-| 5               | ✅        | holow_rt            |
-| 5 Max           | ✅        | Lenny5292           |
-| 5 Pro           | ✅        | Krypz0n             |
+| Model           | Manufacturer | Tested OK | Credits for testing |
+|-----------------|--------------|-----------|---------------------|
+| 3 Lite          | Brightway    | TBA       | TBA                 |
+| 4               | Brightway    | ✅        | Ilkan0342567        |
+| 4 Lite          | Brightway    | ✅        | Gianluxx            |
+| 4 Lite 2nd Gen  | Leqi         | TBA       | TBA                 |
+| 4 Ultra         | Brightway    | ✅        | Hypersniper_de      |
+| 4 Pro 2nd Gen   | Brightway    | ✅        | encryptize          |
+| 5               | Brightway    | ✅        | holow_rt            |
+| 5 Max           | Brightway    | ✅        | Lenny5292           |
+| 5 Pro           | Brightway    | ✅        | Krypz0n             |
+| 5 Elite         | Leqi         | ✅        | Turbojeet           |
 
 > Note: If you own a model marked as TBA (To Be Announced), please be aware that the process hasn't been fully tested yet. You can help by testing and reporting your results.
 
-## Safety Warning ⚠️
+## Safety Warning
 Before proceeding, please understand:
 
 1. **Warranty**: This process will void your scooter's warranty
@@ -35,26 +62,53 @@ Before proceeding, please understand:
 
 > For complete legal information, please read the [Full Disclaimer](#full-disclaimer) at the bottom of this guide.
 
+## Warning About Tuning Chips
+
+Some sellers offer "tuning chips" or "plug-and-play speed modules" that claim to unlock higher speeds on your scooter. We strongly advise against using these devices for several important reasons:
+
+### Safety Risks
+- **Uncontrolled Modifications**: These chips often make arbitrary changes to motor parameters without proper validation
+- **Throttle Problems**: Can interfere with throttle control
+- **Braking Problems**: Can interfere with regenerative braking systems
+- **Bad Respose Time**: The chips introduce delay and will lead to both a delay in the control response and displayed values
+
+### Technical Problems
+- **Unknown Quality**: No quality control or safety standards for these devices
+- **Permanent Damage**: Can cause irreversible damage to your scooter's electronics
+- **Reliability Issues**: May work initially but cause problems over time
+- **No Support**: Usually no warranty or technical support available
+
+### Why Proper Firmware Is Better
+- **Controlled Changes**: Modifications are made with understanding of the system
+- **Reversible**: Can be reverted to stock firmware if needed
+- **Community Tested**: Changes are tested by the community
+- **Transparent**: You know exactly what modifications are being made
+
+> **Important**: Any device claiming to increase speed through a simple plug-in module should be treated with extreme skepticism. These devices often work by sending false signals to the controller, which can lead to dangerous operating conditions.
+
 ## Hardware Requirements
 
 ### Step 1: Check Your Scooter's Connector Type
 First, look at the table below to find your scooter model and its required connector type:
 
+> All connectors have 5 pins. You need to match your scooter's connector type exactly.
+
 Model | Required Connector | Size | Notes
--- | -- | -- | --
-3 Lite | Male | M7 |
-4 | Male | M7 |
-4 Lite | Male | M7 |
-4 Pro 2nd Gen | Female | M7 |
+--- | --- | --- | ---
+3 Lite | Male | M7 | 
+4 | Male | M7 | 
+4 Lite | Male | M7 | 
+4 Lite 2nd Gen | Male | M8 | 
+4 Ultra | Male | M7 | 
+4 Pro 2nd Gen | Female | M7 | 
 5 | Female | M7 | Models manufactured in 2025 may use M6!
-5 Max | Male | M7 |
-5 Pro | Male | M7 |
+5 Max | Male | M7 | 
+5 Pro | Male | M7 | 
+5 Elite | Male | M8 | 
 
 > **What's the difference?**
 > - Male connector: Has pins that stick out
 > - Female connector: Has holes that the pins go into
-> 
-> You need to match your scooter's connector type exactly.
 
 ### Step 2: Get the Required Parts
 You'll need these three main components:
@@ -65,24 +119,25 @@ This is the cable that connects your scooter to the computer. You have two optio
 **Option A: Buy a Complete Cable Assembly (Recommended for Beginners)**
 - This is the easiest option
 - The cable should come with:
-  - M7 5-pin Julet connector (matching your scooter's type)
+  - M7/M8 5-pin Julet connector (depending on scooter model)
   - Pre-attached DuPont headers
   - Proper wire colors and pinout documentation
 - No soldering or special tools required
 - Look for these specifications:
-  - M7 size (not M6 or M8)
+  - M7/M8 size (depending on scooter model)
   - 5-pin configuration
   - Correct connector type (male/female)
   - Clear pinout documentation
-- Example search results (for reference only):
-  - Female connector example: [M7 5-pin Julet Female Dashboard Cable](https://www.ebay.com/itm/356681290474)
-  - Male connector example: [M7 5-pin Julet Male Dashboard Cable](https://www.ebay.com/itm/356888236112)
+- Examples (for reference only):
+  - M7 Female connector: [M7 5-pin Julet Female Dashboard Cable](https://www.ebay.com/itm/356681290474)
+  - M7 Male connector: [M7 5-pin Julet Male Dashboard Cable](https://www.ebay.com/itm/356888236112)
+  - M8 Male connector: [M8 5-pin Julet Male Dashboard Cable](https://www.ebay.de/itm/357880034139)
   > Note: These links are provided as examples of the type of product to look for. We do not endorse these specific sellers or products. Always verify specifications and seller reputation before purchasing.
 
 **Option B: Make Your Own Cable (For Advanced Users)**
 - Requires soldering or crimping skills
 - You'll need to source:
-  - M7 5-pin Julet connector
+  - M7/M8 5-pin Julet connector
   - Appropriate gauge wires
   - DuPont headers
 - Tools needed:
@@ -108,18 +163,26 @@ This is the device that connects your cable to your computer. Look for these spe
 
 > **Note**: These adapters typically look like small USB sticks with pins or a cable attached.
 
-#### 3. DuPont Wires (Only if Needed)
+#### 3. DuPont Wires
 You'll need these if:
-- You're making your own cable, OR
-- Your USB adapter doesn't have a cable attached
+- You have a LEQI device (to bridge the connection)
+- AND/OR, You want to extend the cable length from USB adapter to dashboard cable for more comfort
 
 Specifications to look for:
 - Female-to-female DuPont wires
 - Length: 40-80cm
 - Can be extended with male-to-female sets if needed
 
-### Step 3: Understand the Connections
-The dashboard cable has 5 wires that need to be connected correctly:
+### Step 3: Connect Everything
+The dashboard cable has 5 wires that need to be connected correctly. The pinout varies depending on the connector size, which correlates with the scooter's manufacturer.
+
+Steps:
+- Connect DuPont wires between the dashboard cable and adapter
+- Make sure to match the pinout correctly (see below)
+
+> **Important**: Wire colors might be different on your cable. Always check the pinout with a multimeter if unsure.
+
+#### M7 cable (Brightway models)
 
 Wire Color | Purpose
 -- | --
@@ -129,26 +192,27 @@ Green | TX (Transmit)
 Red | 5V (Power)
 Black | BTN (Button)
 
-> **Important**: Wire colors might be different on your cable. Always check the pinout with a multimeter if unsure.
+Use three DuPont wires to connect GND, RX and TX of the dashboard cable with the adapter. To power on the scooter (trigger) in case it shuts down, you can bridge the **BTN** pin to the **5V** pin momentarily.
 
-### Step 4: Connect Everything
-You have two ways to connect everything:
+Connection example of UART adapter with DuPont wires:
+![Dashboard Cable Pinout (M7)](res/uart_connection_dupont_bw.png)
 
-**Method 1: Direct Connection (Easiest)**
-- If your USB adapter has a cable attached
-- Simply connect the dashboard cable to the adapter
-- Match the wire colors/pinout
+#### M8 cable (Leqi models)
 
-Example of UART adapter with attached cable:
-![Dashboard Cable Pinout](res/uart_connection_direct.png)
+Wire Color | Purpose
+-- | --
+Blue | GND (Ground)
+Yellow | RX (Receive)
+Green | VCC (~38V)
+Red | TX (Transmit)
+Black | BAT (~38V)
 
-**Method 2: Using DuPont Wires**
-- If your USB adapter has pins
-- Connect DuPont wires between the dashboard cable and adapter
-- Make sure to match the pinout correctly
+> **Note**: The dashboard is only powered on as long as the BAT line (38V) is **bridged to the VCC pin**!
 
-Example of UART adapter with DuPont wires:
-![Dashboard Cable Pinout](res/uart_connection_dupont.png)
+Use three DuPont wires to connect GND, RX and TX of the dashboard cable with the adapter. Use a fourth DuPont wire to bridge the BAT pin to the VCC pin. Be extremely careful to match the pinout correctly, otherwise you might **brick** your USB adapter or worst case your scooter.
+
+Connection example of UART adapter with DuPont wires:
+![Dashboard Cable Pinout](res/uart_connection_dupont_leqi.png)
 
 ## Flashing Instructions
 
@@ -210,16 +274,6 @@ Progress stuck at 0% | Try the steps listed below in order
 
 ## Additional Resources
 
-### Finding COM Port
-On Windows:
-1. Open Device Manager
-2. Look under "Ports (COM & LPT)"
-3. Your USB adapter should appear with a COM port number
-
-![Finding COM Port](res/bwflasher_port_2.png)
-
-> Note: If you don't see your adapter, you may need to install drivers for your specific USB adapter model.
-
 ### Dashboard Cable Pinout
 
 Male and female connector pinouts are mirror images of each other - what appears on the left side of the male connector corresponds to the right side of the female connector, as this is how they physically mate together.
@@ -229,6 +283,16 @@ Male and female connector pinouts are mirror images of each other - what appears
 
 #### Female Connector
 ![Pinout for female connector](res/dash_cable_pinout_female.png)
+
+### Finding COM Port
+On Windows:
+1. Open Device Manager
+2. Look under "Ports (COM & LPT)"
+3. Your USB adapter should appear with a COM port number
+
+![Finding COM Port](res/bwflasher_port_2.png)
+
+> Note: If you don't see your adapter, you may need to install drivers for your specific USB adapter model.
 
 ### Advanced Connection Methods
 If you need to create a custom connection, consider these alternatives:
@@ -251,33 +315,6 @@ If you need to create a custom connection, consider these alternatives:
 > **Warning**: These methods are for advanced users only. They require careful handling and proper tools to avoid short circuits and damage.
 
 For a detailed tutorial on custom connector methods, you can watch this [custom connector tutorial](https://www.youtube.com/watch?v=MEVXANRJ1IM).
-
-## Warning About Tuning Chips ⚠️
-
-Some sellers offer "tuning chips" or "plug-and-play speed modules" that claim to unlock higher speeds on your scooter. We strongly advise against using these devices for several important reasons:
-
-### Safety Risks
-- **Uncontrolled Modifications**: These chips often make arbitrary changes to motor parameters without proper validation
-- **Thermal Issues**: Can cause motor and controller overheating by bypassing safety limits
-- **Hardware Stress**: May push components beyond their design specifications
-- **Braking Problems**: Can interfere with regenerative braking systems
-- **Battery Damage**: Risk of battery cell degradation from excessive current draw
-
-### Technical Problems
-- **Unknown Quality**: No quality control or safety standards for these devices
-- **Permanent Damage**: Can cause irreversible damage to your scooter's electronics
-- **Reliability Issues**: Often use cheap components that can fail unexpectedly
-- **Inconsistent Results**: May work initially but cause problems over time
-- **No Support**: Usually no warranty or technical support available
-
-### Why Proper Firmware Is Better
-- **Controlled Changes**: Modifications are made with understanding of the system
-- **Reversible**: Can be reverted to stock firmware if needed
-- **Community Tested**: Changes are tested by the community
-- **Transparent**: You know exactly what modifications are being made
-- **Maintained**: Regular updates and bug fixes from the community
-
-> **Important**: Any device claiming to increase speed through a simple plug-in module should be treated with extreme skepticism. These devices often work by sending false signals to the controller, which can lead to dangerous operating conditions.
 
 ## Full Disclaimer
 This guide is provided with the following important notices:
