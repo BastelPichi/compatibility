@@ -152,7 +152,7 @@ This is the cable that connects your scooter to the computer. You have two optio
 #### 2. USB-to-Serial Adapter
 This is the device that connects your cable to your computer. Look for these specifications:
 - USB to TTL/Serial conversion
-- 3.3V or 5V operation
+- 3.3V or 5V operation, **must be set to 5V**
 - Tested chipset options include:
   - CH340
   - FT232RL
@@ -194,8 +194,11 @@ Black | BTN (Button)
 
 Use three DuPont wires to connect GND, RX and TX of the dashboard cable with the adapter. To power on the scooter (trigger) in case it shuts down, you can bridge the **BTN** pin to the **5V** pin momentarily.
 
+> **Important**: Make sure your UART adapter is set to 5V.
+
 Connection example of UART adapter with DuPont wires:
-![Dashboard Cable Pinout (M7)](res/uart_connection_dupont_bw.png)
+
+![M7 Dashboard Cable Pinout (Brightway)](res/uart_connection_dupont_bw.png)
 
 #### M8 cable (Leqi models)
 
@@ -207,19 +210,23 @@ Green | VCC (~38V)
 Red | TX (Transmit)
 Black | BAT (~38V)
 
-> **Note**: The dashboard is only powered on as long as the BAT line (38V) is **bridged to the VCC pin**!
+> **Note**: The controller is only powered on as long as the BAT line (38V) is **bridged to the VCC pin**! This needs to be bridged all the time during the process to keep the scooter on.
 
 Use three DuPont wires to connect GND, RX and TX of the dashboard cable with the adapter. Use a fourth DuPont wire to bridge the BAT pin to the VCC pin. Be extremely careful to match the pinout correctly, otherwise you might **brick** your USB adapter or worst case your scooter.
 
+> **Important**: Make sure your UART adapter is set to 5V.
+
 Connection example of UART adapter with DuPont wires:
-![Dashboard Cable Pinout](res/uart_connection_dupont_leqi.png)
+
+![M8 Dashboard Cable Pinout (Leqi)](res/uart_connection_dupont_leqi.png)
 
 ## Flashing Instructions
 
 ### Step 1: Prepare Your Hardware
-1. Connect the dashboard cable to your USB adapter
-2. Connect your USB adapter to your computer
-3. Note the COM port number (see [Finding COM Port](#finding-com-port))
+1. Make sure your USB adapter is set to 5V
+2. Connect the dashboard cable to your USB adapter
+3. Connect your USB adapter to your computer
+4. Note the COM port number (see [Finding COM Port](#finding-com-port))
 
 ### Step 2: Get the Software
 1. Download [BwFlasher](https://github.com/scooterteam/bw-flasher/releases/latest)
@@ -279,10 +286,14 @@ Progress stuck at 0% | Try the steps listed below in order
 Male and female connector pinouts are mirror images of each other - what appears on the left side of the male connector corresponds to the right side of the female connector, as this is how they physically mate together.
 
 #### Male Connector
-![Pinout for male connector](res/dash_cable_pinout_male.png)
 
-#### Female Connector
-![Pinout for female connector](res/dash_cable_pinout_female.png)
+![M7 Male Connector Pinout (Brightway)](res/dash_cable_pinout_male_bw.png)
+
+![M8 Male Connector Pinout (LEQI)](res/dash_cable_pinout_male_leqi.png)
+
+#### Male Connector
+
+![M7 Female Connector Pinout (Brightway)](res/dash_cable_pinout_female_bw.png)
 
 ### Finding COM Port
 On Windows:
