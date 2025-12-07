@@ -40,13 +40,13 @@ A comprehensive video tutorial explaining every step in great detail is availabl
 | 3 Lite          | Brightway    | TBA       | TBA                 |
 | 4               | Brightway    | ✅        | Ilkan0342567        |
 | 4 Lite          | Brightway    | ✅        | Gianluxx            |
-| 4 Lite 2nd Gen  | Leqi         | TBA       | TBA                 |
+| 4 Lite 2nd Gen  | LEQI         | TBA       | TBA                 |
 | 4 Ultra         | Brightway    | ✅        | Hypersniper_de      |
 | 4 Pro 2nd Gen   | Brightway    | ✅        | encryptize          |
 | 5               | Brightway    | ✅        | holow_rt            |
 | 5 Max           | Brightway    | ✅        | Lenny5292           |
 | 5 Pro           | Brightway    | ✅        | Krypz0n             |
-| 5 Elite         | Leqi         | ✅        | Turbojeet           |
+| 5 Elite         | LEQI         | ✅        | Turbojeet           |
 
 > Note: If you own a model marked as TBA (To Be Announced), please be aware that the process hasn't been fully tested yet. You can help by testing and reporting your results.
 
@@ -198,9 +198,9 @@ Use three DuPont wires to connect GND, RX and TX of the dashboard cable with the
 
 Connection example of UART adapter with DuPont wires:
 
-![M7 Dashboard Cable Pinout (Brightway)](res/uart_connection_dupont_bw.png)
+![M7 Dashboard Cable Pinout (Brightway)](res/uart_connection_dupont_bw.png "M7 Dashboard Cable Pinout (Brightway)")
 
-#### M8 cable (Leqi models)
+#### M8 cable (LEQI models)
 
 Wire Color | Purpose
 -- | --
@@ -210,7 +210,7 @@ Green | VCC (~38V)
 Red | TX (Transmit)
 Black | BAT (~38V)
 
-> **Note**: The controller is only powered on as long as the BAT line (38V) is **bridged to the VCC pin**! This needs to be bridged all the time during the process to keep the scooter on.
+> **Note**: The controller is only powered on as long as the BAT line (38V) is **bridged to the VCC pin**! It needs to be bridged all the time during the process to keep the scooter on.
 
 Use three DuPont wires to connect GND, RX and TX of the dashboard cable with the adapter. Use a fourth DuPont wire to bridge the BAT pin to the VCC pin. Be extremely careful to match the pinout correctly, otherwise you might **brick** your USB adapter or worst case your scooter.
 
@@ -218,7 +218,7 @@ Use three DuPont wires to connect GND, RX and TX of the dashboard cable with the
 
 Connection example of UART adapter with DuPont wires:
 
-![M8 Dashboard Cable Pinout (Leqi)](res/uart_connection_dupont_leqi.png)
+![M8 Dashboard Cable Pinout (LEQI)](res/uart_connection_dupont_leqi.png "M8 Dashboard Cable Pinout (LEQI)")
 
 ## Flashing Instructions
 
@@ -285,15 +285,19 @@ Progress stuck at 0% | Try the steps listed below in order
 
 Male and female connector pinouts are mirror images of each other - what appears on the left side of the male connector corresponds to the right side of the female connector, as this is how they physically mate together.
 
-#### Male Connector
+#### M7 Connector (Brightway)
+**Male:**
 
-![M7 Male Connector Pinout (Brightway)](res/dash_cable_pinout_male_bw.png)
+![M7 Male Connector Pinout (Brightway)](res/dash_cable_pinout_male_bw.png "M7 Male Connector Pinout (Brightway)")
 
-![M8 Male Connector Pinout (LEQI)](res/dash_cable_pinout_male_leqi.png)
+**Female:**
 
-#### Male Connector
+![M7 Female Connector Pinout (Brightway)](res/dash_cable_pinout_female_bw.png "M7 Female Connector Pinout (Brightway)")
 
-![M7 Female Connector Pinout (Brightway)](res/dash_cable_pinout_female_bw.png)
+#### M8 Connector (LEQI)
+**Male:**
+
+![M8 Male Connector Pinout (LEQI)](res/dash_cable_pinout_male_leqi.png "M8 Male Connector Pinout (LEQI)")
 
 ### Finding COM Port
 On Windows:
@@ -301,7 +305,7 @@ On Windows:
 2. Look under "Ports (COM & LPT)"
 3. Your USB adapter should appear with a COM port number
 
-![Finding COM Port](res/bwflasher_port_2.png)
+![Finding COM Port](res/bwflasher_port_2.png "Finding COM Port")
 
 > Note: If you don't see your adapter, you may need to install drivers for your specific USB adapter model.
 
