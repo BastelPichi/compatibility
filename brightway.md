@@ -129,9 +129,9 @@ This is the cable that connects your scooter to the computer. You have two optio
   - Correct connector type (male/female)
   - Clear pinout documentation
 - Examples (for reference only):
-  - M7 Female connector: [M7 5-pin Julet Female Dashboard Cable](https://www.ebay.com/itm/356681290474)
-  - M7 Male connector: [M7 5-pin Julet Male Dashboard Cable](https://www.ebay.com/itm/356888236112)
-  - M8 Male connector: [M8 5-pin Julet Male Dashboard Cable](https://www.ebay.de/itm/357880034139)
+  - M7 Female connector: [M7 5-pin Julet Female Dashboard Cable](https://www.ebay.de/itm/358572091274)
+  - M7 Male connector: [M7 5-pin Julet Male Dashboard Cable](https://www.ebay.de/itm/358572091267)
+  - M8 Male connector: [M8 5-pin Julet Male Dashboard Cable](https://www.ebay.de/itm/358572091269)
   > Note: These links are provided as examples of the type of product to look for. We do not endorse these specific sellers or products. Always verify specifications and seller reputation before purchasing.
 
 **Option B: Make Your Own Cable (For Advanced Users)**
