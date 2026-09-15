@@ -3,7 +3,8 @@ You can view this on: [https://wiki.bastelpichi.de](https://wiki.bastelpichi.de)
 
 Quick Links:
 - Compatibility List: [https://wiki.bastelpichi.de/compatibility](https://wiki.bastelpichi.de/compatibility)
-- Brightway Tuning (incl. 4 Pro 2nd and 5 Pro): [https://wiki.bastelpichi.de/brightway](https://wiki.bastelpichi.de/brightway)
+- Brightway & LEQI Tuning (incl. 4 Pro 2nd and 5 Pro): [https://wiki.bastelpichi.de/brightway](https://wiki.bastelpichi.de/brightway)
+- UART protocols (Brightway & LEQI): [https://wiki.bastelpichi.de/uart](https://wiki.bastelpichi.de/uart)
 - Clone Dash Advice: [https://wiki.bastelpichi.de/clone-dashes](https://wiki.bastelpichi.de/clone-dashes)
 - F2 Tuning [https://wiki.bastelpichi.de/f2](https://wiki.bastelpichi.de/f2)
 - Motor Wiki [https://wiki.bastelpichi.de/motors](https://wiki.bastelpichi.de/motors)
