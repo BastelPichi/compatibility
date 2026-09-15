@@ -281,6 +281,9 @@ Progress stuck at 0% | Try the steps listed below in order
 
 ## Additional Resources
 
+### UART protocol (for developers)
+Wire-level dash↔ESC framing for Brightway (`0x51`) and LEQI (`0x5A`), with CRC/checksum helpers and minimal Python examples: [UART guide](uart).
+
 ### Dashboard Cable Pinout
 
 Male and female connector pinouts are mirror images of each other - what appears on the left side of the male connector corresponds to the right side of the female connector, as this is how they physically mate together.
