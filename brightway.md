@@ -46,7 +46,10 @@ A comprehensive video tutorial explaining every step in great detail is availabl
 | 5               | Brightway    | ✅        | holow_rt            |
 | 5 Max           | Brightway    | ✅        | Lenny5292           |
 | 5 Pro           | Brightway    | ✅        | Krypz0n             |
+| 5 Plus          | LEQI         | TBA       | TBA                 |
 | 5 Elite         | LEQI         | ✅        | Turbojeet           |
+| 6               | LEQI         | ✅        | telefon01           |
+| 6 Lite          | LEQI         | ✅        | atte11111           |
 
 > Note: If you own a model marked as TBA (To Be Announced), please be aware that the process hasn't been fully tested yet. You can help by testing and reporting your results.
 
@@ -91,20 +94,23 @@ Some sellers offer "tuning chips" or "plug-and-play speed modules" that claim to
 ### Step 1: Check Your Scooter's Connector Type
 First, look at the table below to find your scooter model and its required connector type:
 
-> All connectors have 5 pins. You need to match your scooter's connector type exactly.
+> You need to match your scooter's connector type exactly.
 
-Model | Required Connector | Size | Notes
---- | --- | --- | ---
-3 Lite | Male | M7 | 
-4 | Male | M7 | 
-4 Lite | Male | M7 | 
-4 Lite 2nd Gen | Male | M8 | 
-4 Ultra | Male | M7 | 
-4 Pro 2nd Gen | Female | M7 | 
-5 | Female | M7 | Models manufactured in 2025 may use M6!
-5 Max | Male | M7 | 
-5 Pro | Male | M7 | 
-5 Elite | Male | M8 | 
+Model            | Required Connector | Size | Pins
+---------------- | ------------------ | ---- | ----
+3 Lite           | Male               | M7   | 5
+4                | Male               | M7   | 5
+4 Lite           | Male               | M7   | 5
+4 Lite 2nd Gen   | Male               | M8   | 5
+4 Ultra          | Male               | M7   | 5
+4 Pro 2nd Gen    | Female             | M7   | 5
+5                | Female             | M7   | 5
+5 Max            | Male               | M7   | 5
+5 Pro            | Male               | M7   | 5
+5 Plus           | Male               | M8   | 7(!)
+5 Elite          | Male               | M8   | 5
+6                | Male               | M8   | 5
+6 Lite           | Male               | M8   | 5
 
 > **What's the difference?**
 > - Male connector: Has pins that stick out
@@ -308,6 +314,7 @@ On Windows:
 ![Finding COM Port](res/bwflasher_port_2.png "Finding COM Port")
 
 > Note: If you don't see your adapter, you may need to install drivers for your specific USB adapter model.
+
 
 ### Advanced Connection Methods
 If you need to create a custom connection, consider these alternatives:
